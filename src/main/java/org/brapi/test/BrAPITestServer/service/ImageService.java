@@ -6,25 +6,32 @@ import java.util.Optional;
 
 import org.brapi.test.BrAPITestServer.BaseUrlProperty;
 import org.brapi.test.BrAPITestServer.model.entity.ImageEntity;
+import org.brapi.test.BrAPITestServer.model.entity.ObservationUnitEntity;
 import org.brapi.test.BrAPITestServer.repository.ImageRepository;
+import org.brapi.test.BrAPITestServer.repository.ObservationUnitRepository;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.util.UrlPathHelper;
 
 import io.swagger.model.Image;
 import io.swagger.model.ImageRequest;
+import io.swagger.model.Metadata;
 import io.swagger.model.NewImageDbIdsResponseResult;
 
 @Service
 public class ImageService {
 	
 	private ImageRepository imageRepository;
+	private ObservationUnitRepository observationUnitRepository;
 
     @Value("${app.baseurl}")
 	private String baseUrlProperty;
 	
-	public ImageService(ImageRepository imageRepository) {
+	public ImageService(ImageRepository imageRepository, ObservationUnitRepository observationUnitRepository) {
 		this.imageRepository = imageRepository;
+		this.observationUnitRepository = observationUnitRepository;
 	}
 	
 	public Image getImage(String imageDbId) {
@@ -40,6 +47,28 @@ public class ImageService {
 		return image;
 	}
 
+	public List<Image> findImages(String observationUnitDbId, String observationDbId, String descriptiveOntologyTerm, Metadata metaData) {
+		Pageable pageReq = PagingUtility.getPageRequest(metaData);
+		
+		String obsUnitDbId = "", obsDbId = "", tag = "";
+		if(observationUnitDbId != null && !observationUnitDbId.isEmpty()) {
+			obsUnitDbId = observationUnitDbId;
+		}
+		if(observationDbId != null && !observationDbId.isEmpty()) {
+			obsDbId = "%" + observationDbId +"%";
+		}
+		if(descriptiveOntologyTerm != null && !descriptiveOntologyTerm.isEmpty()) {
+			tag = "%" + descriptiveOntologyTerm +"%";
+		}
+		
+		Page<ImageEntity> imagePage = imageRepository.findBySearch(obsUnitDbId, obsDbId, tag, pageReq);
+		PagingUtility.calculateMetaData(metaData, imagePage);
+		
+		List<Image> images = imagePage.map(this::convertFromEntiy).getContent();
+		
+		return images;
+	}
+	
 	public byte[] getImageData(String imageDbId) {
 		byte[] bytes = null;
 		if(imageDbId != null && !imageDbId.isEmpty()) {
@@ -85,7 +114,7 @@ public class ImageService {
 			if(imageOption.isPresent()) {
 				newEntity = imageOption.get();
 				newEntity.setImageData(imageData);
-				newEntity.setImageURL(baseUrlProperty + "/images/" + newEntity.getId() + "/imagedata" );
+				newEntity.setImageURL(constructURL(newEntity) );
 			}
 		}
 		
@@ -103,7 +132,30 @@ public class ImageService {
 		return result;
 	}
 	
+	private String constructURL(ImageEntity newEntity) {
+		String name = "image";
+		if(newEntity.getImageFileName() != null && !newEntity.getImageFileName().isEmpty()) {
+			name = newEntity.getImageFileName().replaceAll(" ", "_");
+		}else {
+			if(newEntity.getName() != null && !newEntity.getName().isEmpty()) {
+				name = newEntity.getName().replaceAll(" ", "_");			
+			}
+			if(newEntity.getImageType() != null && !newEntity.getImageType().isEmpty()) {
+				name = name + "." + newEntity.getImageType();
+			}	
+		}
+		return baseUrlProperty + "/images/" + newEntity.getId() + "/" + name;
+	}
+
 	private void updateEntity(ImageEntity newEntity, ImageRequest imageMetadata) {
+		
+		if(imageMetadata.getObservationUnitDbId() != null && !imageMetadata.getObservationUnitDbId().isEmpty()) {
+			Optional<ObservationUnitEntity> unitOption = this.observationUnitRepository.findById(imageMetadata.getObservationUnitDbId());
+			if(unitOption.isPresent()) {
+				newEntity.setObservationUnit(unitOption.get());
+			}
+		}
+		
 		newEntity.setDescription(imageMetadata.getDescription());
 		newEntity.setDescriptiveOntologyTerms(arrayToString(imageMetadata.getDescriptiveOntologyTerms()));
 		newEntity.setImageFileName(imageMetadata.getImageFileName());

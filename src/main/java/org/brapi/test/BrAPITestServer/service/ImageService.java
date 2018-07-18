@@ -136,8 +136,10 @@ public class ImageService {
 	
 	private String arrayToString(List<String> list) {
 		String str = "";
-		for(String item: list) {
-			str = str + item + ",";
+		if(list != null && !list.isEmpty()) {
+			for(String item: list) {
+				str = str + item + ",";
+			}
 		}
 		return str;
 	}

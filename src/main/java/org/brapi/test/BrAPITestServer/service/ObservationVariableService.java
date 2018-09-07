@@ -143,6 +143,7 @@ public class ObservationVariableService {
 		var.setInstitution(entity.getGrowthStage());
 		var.setLanguage(entity.getLanguage());
 		var.setName(entity.getName());
+		var.setObservationVariableName(entity.getName());
 		var.setObservationVariableDbId(entity.getId());
 		var.setOntologyDbId(entity.getOntology().getId());
 		var.setOntologyName(entity.getOntology().getOntologyName());

@@ -344,6 +344,9 @@ public class StudyService {
 				germplasm.setGermplasmPUI(entity.getGermplasmPUI());
 				germplasm.setPedigree(entity.getPedigree().getPedigree());
 				germplasm.setSeedSource(entity.getGermplasmSeedSource());
+				List<String> synonyms = entity.getSynonyms() == null ? null
+						: Arrays.asList(entity.getSynonyms().split(" *, *"));
+				germplasm.setSynonyms(synonyms);
 				return germplasm;
 			}).getContent());
 

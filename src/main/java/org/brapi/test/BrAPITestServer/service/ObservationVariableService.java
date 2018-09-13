@@ -149,7 +149,7 @@ public class ObservationVariableService {
 		var.setOntologyName(entity.getOntology().getOntologyName());
 		var.setScientist(entity.getScientist());
 		var.setStatus(entity.getStatus());
-		var.setSubmissionTimeStamp(DateUtility.toOffsetDateTime(entity.getSubmissionTimestamp()));
+		var.setSubmissionTimestamp(DateUtility.toOffsetDateTime(entity.getSubmissionTimestamp()));
 		var.setSynonyms(entity.getSynonyms().stream().map(e -> e.getSynonym()).collect(Collectors.toList()));
 		var.setXref(entity.getXref());
 
@@ -163,7 +163,7 @@ public class ObservationVariableService {
 		var.setMethod(method);
 
 		Scale scale = new Scale();
-		scale.setDataType(entity.getScale().getDataType());
+		scale.setDataType(Scale.DataTypeEnum.fromValue(entity.getScale().getDataType()));
 		scale.setDecimalPlaces(entity.getScale().getDecimalPlaces());
 		scale.setName(entity.getScale().getName());
 		scale.setScaleDbId(entity.getScale().getId());

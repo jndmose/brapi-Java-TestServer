@@ -16,7 +16,6 @@ import javax.validation.constraints.*;
  * VendorSpecificationStandardRequirement
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class VendorSpecificationStandardRequirement   {
   @JsonProperty("blankWellPosition")
@@ -59,7 +58,7 @@ public class VendorSpecificationStandardRequirement   {
     return this;
   }
 
-   /**
+  /**
    * Get blankWellPosition
    * @return blankWellPosition
   **/
@@ -80,7 +79,7 @@ public class VendorSpecificationStandardRequirement   {
     return this;
   }
 
-   /**
+  /**
    * Human readable details about the accepted input formats
    * @return inputFormatDetails
   **/
@@ -108,7 +107,7 @@ public class VendorSpecificationStandardRequirement   {
     return this;
   }
 
-   /**
+  /**
    * List of accepted data formats
    * @return inputFormats
   **/
@@ -128,7 +127,7 @@ public class VendorSpecificationStandardRequirement   {
     return this;
   }
 
-   /**
+  /**
    * The maximum allowed concentration
    * @return maxConcentration
   **/
@@ -148,7 +147,7 @@ public class VendorSpecificationStandardRequirement   {
     return this;
   }
 
-   /**
+  /**
    * The minimum allowed volume of a sample
    * @return maxVolume
   **/
@@ -168,7 +167,7 @@ public class VendorSpecificationStandardRequirement   {
     return this;
   }
 
-   /**
+  /**
    * the minimum allowed concentration of a sample
    * @return minConcentration
   **/
@@ -188,7 +187,7 @@ public class VendorSpecificationStandardRequirement   {
     return this;
   }
 
-   /**
+  /**
    * The first sample number 
    * @return minSampleNumber
   **/
@@ -208,7 +207,7 @@ public class VendorSpecificationStandardRequirement   {
     return this;
   }
 
-   /**
+  /**
    * The minimum allowed volume of a sample
    * @return minVolume
   **/
@@ -228,7 +227,7 @@ public class VendorSpecificationStandardRequirement   {
     return this;
   }
 
-   /**
+  /**
    * The orientation of a plate
    * @return plateOrientation
   **/
@@ -248,7 +247,7 @@ public class VendorSpecificationStandardRequirement   {
     return this;
   }
 
-   /**
+  /**
    * Human readable details about the allowed sample types
    * @return sampleTypeDetails
   **/
@@ -276,7 +275,7 @@ public class VendorSpecificationStandardRequirement   {
     return this;
   }
 
-   /**
+  /**
    * List of allowed sample types
    * @return sampleTypes
   **/

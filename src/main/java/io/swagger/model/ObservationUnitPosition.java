@@ -17,7 +17,6 @@ import javax.validation.constraints.*;
  * ObservationUnitPosition
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class ObservationUnitPosition   {
   @JsonProperty("X")
@@ -84,6 +83,104 @@ public class ObservationUnitPosition   {
   @JsonProperty("observationUnitName")
   private String observationUnitName = null;
 
+  @JsonProperty("positionCoordinateX")
+  private String positionCoordinateX = null;
+
+  /**
+   * The type of positional coordinate used. Must be one of the following values LONGITUDE - ISO 6709 standard, WGS84 geodetic datum. See \"Location Coordinate Encoding\" for details LATITUDE - ISO 6709 standard, WGS84 geodetic datum. See \"Location Coordinate Encoding\" for details PLANTED_ROW - The physical planted row number  PLANTED_INDIVIDUAl - The physical counted number, could be independant or within a planted row GRID_ROW - The row index number of a square grid overlay GRID_COL - The column index number of a square grid overlay MEASURED_ROW - The distance in meters from a defined 0th row MEASURED_COL - The distance in meters from a defined 0th column 
+   */
+  public enum PositionCoordinateXTypeEnum {
+    LONGITUDE("LONGITUDE"),
+    
+    LATITUDE("LATITUDE"),
+    
+    PLANTED_ROW("PLANTED_ROW"),
+    
+    PLANTED_INDIVIDUAL("PLANTED_INDIVIDUAl"),
+    
+    GRID_ROW("GRID_ROW"),
+    
+    GRID_COL("GRID_COL"),
+    
+    MEASURED_ROW("MEASURED_ROW"),
+    
+    MEASURED_COL("MEASURED_COL");
+
+    private String value;
+
+    PositionCoordinateXTypeEnum(String value) {
+      this.value = value;
+    }
+
+    @Override
+    @JsonValue
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    @JsonCreator
+    public static PositionCoordinateXTypeEnum fromValue(String text) {
+      for (PositionCoordinateXTypeEnum b : PositionCoordinateXTypeEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+  }
+
+  @JsonProperty("positionCoordinateXType")
+  private PositionCoordinateXTypeEnum positionCoordinateXType = null;
+
+  @JsonProperty("positionCoordinateY")
+  private String positionCoordinateY = null;
+
+  /**
+   * The type of positional coordinate used. Must be one of the following values LONGITUDE - ISO 6709 standard, WGS84 geodetic datum. See \"Location Coordinate Encoding\" for details LATITUDE - ISO 6709 standard, WGS84 geodetic datum. See \"Location Coordinate Encoding\" for details PLANTED_ROW - The physical planted row number  PLANTED_INDIVIDUAl - The physical counted number, could be independant or within a planted row GRID_ROW - The row index number of a square grid overlay GRID_COL - The column index number of a square grid overlay MEASURED_ROW - The distance in meters from a defined 0th row MEASURED_COL - The distance in meters from a defined 0th column 
+   */
+  public enum PositionCoordinateYTypeEnum {
+    LONGITUDE("LONGITUDE"),
+    
+    LATITUDE("LATITUDE"),
+    
+    PLANTED_ROW("PLANTED_ROW"),
+    
+    PLANTED_INDIVIDUAL("PLANTED_INDIVIDUAl"),
+    
+    GRID_ROW("GRID_ROW"),
+    
+    GRID_COL("GRID_COL"),
+    
+    MEASURED_ROW("MEASURED_ROW"),
+    
+    MEASURED_COL("MEASURED_COL");
+
+    private String value;
+
+    PositionCoordinateYTypeEnum(String value) {
+      this.value = value;
+    }
+
+    @Override
+    @JsonValue
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    @JsonCreator
+    public static PositionCoordinateYTypeEnum fromValue(String text) {
+      for (PositionCoordinateYTypeEnum b : PositionCoordinateYTypeEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+  }
+
+  @JsonProperty("positionCoordinateYType")
+  private PositionCoordinateYTypeEnum positionCoordinateYType = null;
+
   @JsonProperty("replicate")
   private String replicate = null;
 
@@ -95,11 +192,11 @@ public class ObservationUnitPosition   {
     return this;
   }
 
-   /**
-   * The X position coordinate for an observation unit. Different systems may use different coordinate systems.
+  /**
+   * DEPRECATED - use \"positionCoordinateX\"
    * @return X
   **/
-  @ApiModelProperty(value = "The X position coordinate for an observation unit. Different systems may use different coordinate systems.")
+  @ApiModelProperty(value = "DEPRECATED - use \"positionCoordinateX\"")
 
 
   public String getX() {
@@ -115,11 +212,11 @@ public class ObservationUnitPosition   {
     return this;
   }
 
-   /**
-   * The Y position coordinate for an observation unit. Different systems may use different coordinate systems.
+  /**
+   * DEPRECATED - use \"positionCoordinateY\"
    * @return Y
   **/
-  @ApiModelProperty(value = "The Y position coordinate for an observation unit. Different systems may use different coordinate systems.")
+  @ApiModelProperty(value = "DEPRECATED - use \"positionCoordinateY\"")
 
 
   public String getY() {
@@ -143,7 +240,7 @@ public class ObservationUnitPosition   {
     return this;
   }
 
-   /**
+  /**
    * Additional arbitrary info
    * @return additionalInfo
   **/
@@ -163,7 +260,7 @@ public class ObservationUnitPosition   {
     return this;
   }
 
-   /**
+  /**
    * The block number for an observation unit. Different systems may use different block designs.
    * @return blockNumber
   **/
@@ -183,7 +280,7 @@ public class ObservationUnitPosition   {
     return this;
   }
 
-   /**
+  /**
    * The type of entry for this observation unit. ex. \"check\", \"test\", \"filler\"
    * @return entryType
   **/
@@ -203,7 +300,7 @@ public class ObservationUnitPosition   {
     return this;
   }
 
-   /**
+  /**
    *  The ID which uniquely identifies a germplasm
    * @return germplasmDbId
   **/
@@ -223,7 +320,7 @@ public class ObservationUnitPosition   {
     return this;
   }
 
-   /**
+  /**
    * Name of the germplasm. It can be the prefered name and does not have to be unique.
    * @return germplasmName
   **/
@@ -243,7 +340,7 @@ public class ObservationUnitPosition   {
     return this;
   }
 
-   /**
+  /**
    * The level of an observation unit. ex. \"plot\", \"plant\"
    * @return observationLevel
   **/
@@ -263,7 +360,7 @@ public class ObservationUnitPosition   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies an observation unit
    * @return observationUnitDbId
   **/
@@ -283,7 +380,7 @@ public class ObservationUnitPosition   {
     return this;
   }
 
-   /**
+  /**
    * A human readable name for an observation unit
    * @return observationUnitName
   **/
@@ -298,12 +395,92 @@ public class ObservationUnitPosition   {
     this.observationUnitName = observationUnitName;
   }
 
+  public ObservationUnitPosition positionCoordinateX(String positionCoordinateX) {
+    this.positionCoordinateX = positionCoordinateX;
+    return this;
+  }
+
+  /**
+   * The X position coordinate for an observation unit. Different systems may use different coordinate systems.
+   * @return positionCoordinateX
+  **/
+  @ApiModelProperty(value = "The X position coordinate for an observation unit. Different systems may use different coordinate systems.")
+
+
+  public String getPositionCoordinateX() {
+    return positionCoordinateX;
+  }
+
+  public void setPositionCoordinateX(String positionCoordinateX) {
+    this.positionCoordinateX = positionCoordinateX;
+  }
+
+  public ObservationUnitPosition positionCoordinateXType(PositionCoordinateXTypeEnum positionCoordinateXType) {
+    this.positionCoordinateXType = positionCoordinateXType;
+    return this;
+  }
+
+  /**
+   * The type of positional coordinate used. Must be one of the following values LONGITUDE - ISO 6709 standard, WGS84 geodetic datum. See \"Location Coordinate Encoding\" for details LATITUDE - ISO 6709 standard, WGS84 geodetic datum. See \"Location Coordinate Encoding\" for details PLANTED_ROW - The physical planted row number  PLANTED_INDIVIDUAl - The physical counted number, could be independant or within a planted row GRID_ROW - The row index number of a square grid overlay GRID_COL - The column index number of a square grid overlay MEASURED_ROW - The distance in meters from a defined 0th row MEASURED_COL - The distance in meters from a defined 0th column 
+   * @return positionCoordinateXType
+  **/
+  @ApiModelProperty(value = "The type of positional coordinate used. Must be one of the following values LONGITUDE - ISO 6709 standard, WGS84 geodetic datum. See \"Location Coordinate Encoding\" for details LATITUDE - ISO 6709 standard, WGS84 geodetic datum. See \"Location Coordinate Encoding\" for details PLANTED_ROW - The physical planted row number  PLANTED_INDIVIDUAl - The physical counted number, could be independant or within a planted row GRID_ROW - The row index number of a square grid overlay GRID_COL - The column index number of a square grid overlay MEASURED_ROW - The distance in meters from a defined 0th row MEASURED_COL - The distance in meters from a defined 0th column ")
+
+
+  public PositionCoordinateXTypeEnum getPositionCoordinateXType() {
+    return positionCoordinateXType;
+  }
+
+  public void setPositionCoordinateXType(PositionCoordinateXTypeEnum positionCoordinateXType) {
+    this.positionCoordinateXType = positionCoordinateXType;
+  }
+
+  public ObservationUnitPosition positionCoordinateY(String positionCoordinateY) {
+    this.positionCoordinateY = positionCoordinateY;
+    return this;
+  }
+
+  /**
+   * The Y position coordinate for an observation unit. Different systems may use different coordinate systems.
+   * @return positionCoordinateY
+  **/
+  @ApiModelProperty(value = "The Y position coordinate for an observation unit. Different systems may use different coordinate systems.")
+
+
+  public String getPositionCoordinateY() {
+    return positionCoordinateY;
+  }
+
+  public void setPositionCoordinateY(String positionCoordinateY) {
+    this.positionCoordinateY = positionCoordinateY;
+  }
+
+  public ObservationUnitPosition positionCoordinateYType(PositionCoordinateYTypeEnum positionCoordinateYType) {
+    this.positionCoordinateYType = positionCoordinateYType;
+    return this;
+  }
+
+  /**
+   * The type of positional coordinate used. Must be one of the following values LONGITUDE - ISO 6709 standard, WGS84 geodetic datum. See \"Location Coordinate Encoding\" for details LATITUDE - ISO 6709 standard, WGS84 geodetic datum. See \"Location Coordinate Encoding\" for details PLANTED_ROW - The physical planted row number  PLANTED_INDIVIDUAl - The physical counted number, could be independant or within a planted row GRID_ROW - The row index number of a square grid overlay GRID_COL - The column index number of a square grid overlay MEASURED_ROW - The distance in meters from a defined 0th row MEASURED_COL - The distance in meters from a defined 0th column 
+   * @return positionCoordinateYType
+  **/
+  @ApiModelProperty(value = "The type of positional coordinate used. Must be one of the following values LONGITUDE - ISO 6709 standard, WGS84 geodetic datum. See \"Location Coordinate Encoding\" for details LATITUDE - ISO 6709 standard, WGS84 geodetic datum. See \"Location Coordinate Encoding\" for details PLANTED_ROW - The physical planted row number  PLANTED_INDIVIDUAl - The physical counted number, could be independant or within a planted row GRID_ROW - The row index number of a square grid overlay GRID_COL - The column index number of a square grid overlay MEASURED_ROW - The distance in meters from a defined 0th row MEASURED_COL - The distance in meters from a defined 0th column ")
+
+
+  public PositionCoordinateYTypeEnum getPositionCoordinateYType() {
+    return positionCoordinateYType;
+  }
+
+  public void setPositionCoordinateYType(PositionCoordinateYTypeEnum positionCoordinateYType) {
+    this.positionCoordinateYType = positionCoordinateYType;
+  }
+
   public ObservationUnitPosition replicate(String replicate) {
     this.replicate = replicate;
     return this;
   }
 
-   /**
+  /**
    * The replicate number of an observation unit. May be the same as blockNumber.
    * @return replicate
   **/
@@ -323,7 +500,7 @@ public class ObservationUnitPosition   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies a study within the given database server
    * @return studyDbId
   **/
@@ -358,13 +535,17 @@ public class ObservationUnitPosition   {
         Objects.equals(this.observationLevel, observationUnitPosition.observationLevel) &&
         Objects.equals(this.observationUnitDbId, observationUnitPosition.observationUnitDbId) &&
         Objects.equals(this.observationUnitName, observationUnitPosition.observationUnitName) &&
+        Objects.equals(this.positionCoordinateX, observationUnitPosition.positionCoordinateX) &&
+        Objects.equals(this.positionCoordinateXType, observationUnitPosition.positionCoordinateXType) &&
+        Objects.equals(this.positionCoordinateY, observationUnitPosition.positionCoordinateY) &&
+        Objects.equals(this.positionCoordinateYType, observationUnitPosition.positionCoordinateYType) &&
         Objects.equals(this.replicate, observationUnitPosition.replicate) &&
         Objects.equals(this.studyDbId, observationUnitPosition.studyDbId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(X, Y, additionalInfo, blockNumber, entryType, germplasmDbId, germplasmName, observationLevel, observationUnitDbId, observationUnitName, replicate, studyDbId);
+    return Objects.hash(X, Y, additionalInfo, blockNumber, entryType, germplasmDbId, germplasmName, observationLevel, observationUnitDbId, observationUnitName, positionCoordinateX, positionCoordinateXType, positionCoordinateY, positionCoordinateYType, replicate, studyDbId);
   }
 
   @Override
@@ -382,6 +563,10 @@ public class ObservationUnitPosition   {
     sb.append("    observationLevel: ").append(toIndentedString(observationLevel)).append("\n");
     sb.append("    observationUnitDbId: ").append(toIndentedString(observationUnitDbId)).append("\n");
     sb.append("    observationUnitName: ").append(toIndentedString(observationUnitName)).append("\n");
+    sb.append("    positionCoordinateX: ").append(toIndentedString(positionCoordinateX)).append("\n");
+    sb.append("    positionCoordinateXType: ").append(toIndentedString(positionCoordinateXType)).append("\n");
+    sb.append("    positionCoordinateY: ").append(toIndentedString(positionCoordinateY)).append("\n");
+    sb.append("    positionCoordinateYType: ").append(toIndentedString(positionCoordinateYType)).append("\n");
     sb.append("    replicate: ").append(toIndentedString(replicate)).append("\n");
     sb.append("    studyDbId: ").append(toIndentedString(studyDbId)).append("\n");
     sb.append("}");

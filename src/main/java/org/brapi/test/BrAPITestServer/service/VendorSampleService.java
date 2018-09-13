@@ -241,6 +241,7 @@ public class VendorSampleService {
 				deliverable.setDescription(deliverableEntity.getDescription());
 				deliverable.setFormat(deliverableEntity.getFormat());
 				deliverable.setName(deliverableEntity.getName());
+				deliverable.setDeliverableName(deliverableEntity.getName());
 				return deliverable;
 			}).collect(Collectors.toList()));
 

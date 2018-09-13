@@ -14,7 +14,6 @@ import javax.validation.constraints.*;
  * PhenotypesRequestObservation
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class PhenotypesRequestObservation   {
   @JsonProperty("collector")
@@ -43,7 +42,7 @@ public class PhenotypesRequestObservation   {
     return this;
   }
 
-   /**
+  /**
    * The name or identifier of the entity which collected the observation
    * @return collector
   **/
@@ -64,7 +63,7 @@ public class PhenotypesRequestObservation   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies an observation
    * @return observationDbId
   **/
@@ -84,7 +83,7 @@ public class PhenotypesRequestObservation   {
     return this;
   }
 
-   /**
+  /**
    * The date and time  when this observation was made 
    * @return observationTimeStamp
   **/
@@ -106,7 +105,7 @@ public class PhenotypesRequestObservation   {
     return this;
   }
 
-   /**
+  /**
    * Variable unique identifier
    * @return observationVariableDbId
   **/
@@ -127,7 +126,7 @@ public class PhenotypesRequestObservation   {
     return this;
   }
 
-   /**
+  /**
    * A human readable name for an observation variable
    * @return observationVariableName
   **/
@@ -148,7 +147,7 @@ public class PhenotypesRequestObservation   {
     return this;
   }
 
-   /**
+  /**
    * The season when the observation data was collected
    * @return season
   **/
@@ -168,7 +167,7 @@ public class PhenotypesRequestObservation   {
     return this;
   }
 
-   /**
+  /**
    * The value of the data collected as an observation
    * @return value
   **/

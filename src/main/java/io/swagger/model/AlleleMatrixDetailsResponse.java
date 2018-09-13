@@ -5,10 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.model.AlleleMatrixDetails;
+import io.swagger.model.AlleleMatrixDetailsResponseResult;
 import io.swagger.model.Metadata;
-import java.util.ArrayList;
-import java.util.List;
 import org.springframework.validation.annotation.Validated;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
@@ -17,14 +15,12 @@ import javax.validation.constraints.*;
  * AlleleMatrixDetailsResponse
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class AlleleMatrixDetailsResponse   {
   @JsonProperty("metadata")
   private Metadata metadata = null;
 
   @JsonProperty("result")
-  @Valid
   private AlleleMatrixDetailsResponseResult result = null;
 
   public AlleleMatrixDetailsResponse metadata(Metadata metadata) {
@@ -32,7 +28,7 @@ public class AlleleMatrixDetailsResponse   {
     return this;
   }
 
-   /**
+  /**
    * Get metadata
    * @return metadata
   **/
@@ -53,7 +49,7 @@ public class AlleleMatrixDetailsResponse   {
     return this;
   }
 
-   /**
+  /**
    * Get result
    * @return result
   **/

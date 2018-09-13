@@ -19,7 +19,6 @@ import javax.validation.constraints.*;
  * TrialSummary
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class TrialSummary   {
   @JsonProperty("active")
@@ -56,7 +55,7 @@ public class TrialSummary   {
     return this;
   }
 
-   /**
+  /**
    * Is this trail currently active
    * @return active
   **/
@@ -84,7 +83,7 @@ public class TrialSummary   {
     return this;
   }
 
-   /**
+  /**
    * Additional arbitrary info
    * @return additionalInfo
   **/
@@ -104,7 +103,7 @@ public class TrialSummary   {
     return this;
   }
 
-   /**
+  /**
    * The date this trial ends
    * @return endDate
   **/
@@ -125,7 +124,7 @@ public class TrialSummary   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies a program
    * @return programDbId
   **/
@@ -145,7 +144,7 @@ public class TrialSummary   {
     return this;
   }
 
-   /**
+  /**
    * The human readable name of a program
    * @return programName
   **/
@@ -165,7 +164,7 @@ public class TrialSummary   {
     return this;
   }
 
-   /**
+  /**
    * The date this trial started
    * @return startDate
   **/
@@ -194,7 +193,7 @@ public class TrialSummary   {
     return this;
   }
 
-   /**
+  /**
    * List of studies inside this trial
    * @return studies
   **/
@@ -215,7 +214,7 @@ public class TrialSummary   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies a trial
    * @return trialDbId
   **/
@@ -235,7 +234,7 @@ public class TrialSummary   {
     return this;
   }
 
-   /**
+  /**
    * The human readable name of a trial
    * @return trialName
   **/

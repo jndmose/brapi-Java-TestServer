@@ -17,7 +17,6 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "new phenotypes")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class PhenotypesRequestData   {
   @JsonProperty("observatioUnitDbId")
@@ -35,7 +34,7 @@ public class PhenotypesRequestData   {
     return this;
   }
 
-   /**
+  /**
    * Get observatioUnitDbId
    * @return observatioUnitDbId
   **/
@@ -61,7 +60,7 @@ public class PhenotypesRequestData   {
     return this;
   }
 
-   /**
+  /**
    * Get observations
    * @return observations
   **/
@@ -83,7 +82,7 @@ public class PhenotypesRequestData   {
     return this;
   }
 
-   /**
+  /**
    * Get studyDbId
    * @return studyDbId
   **/

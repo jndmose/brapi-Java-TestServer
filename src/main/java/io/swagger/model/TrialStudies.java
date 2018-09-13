@@ -13,7 +13,6 @@ import javax.validation.constraints.*;
  * TrialStudies
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class TrialStudies   {
   @JsonProperty("locationDbId")
@@ -33,7 +32,7 @@ public class TrialStudies   {
     return this;
   }
 
-   /**
+  /**
    * Get locationDbId
    * @return locationDbId
   **/
@@ -53,7 +52,7 @@ public class TrialStudies   {
     return this;
   }
 
-   /**
+  /**
    * Get locationName
    * @return locationName
   **/
@@ -73,7 +72,7 @@ public class TrialStudies   {
     return this;
   }
 
-   /**
+  /**
    * Get studyDbId
    * @return studyDbId
   **/
@@ -93,7 +92,7 @@ public class TrialStudies   {
     return this;
   }
 
-   /**
+  /**
    * Get studyName
    * @return studyName
   **/

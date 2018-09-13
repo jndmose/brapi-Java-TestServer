@@ -13,7 +13,6 @@ import javax.validation.constraints.*;
  * Ontology
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class Ontology   {
   @JsonProperty("authors")
@@ -42,7 +41,7 @@ public class Ontology   {
     return this;
   }
 
-   /**
+  /**
    * Ontology's list of authors (no specific format)
    * @return authors
   **/
@@ -62,7 +61,7 @@ public class Ontology   {
     return this;
   }
 
-   /**
+  /**
    * Ontology copyright
    * @return copyright
   **/
@@ -82,7 +81,7 @@ public class Ontology   {
     return this;
   }
 
-   /**
+  /**
    * Human readable description of Ontology
    * @return description
   **/
@@ -102,7 +101,7 @@ public class Ontology   {
     return this;
   }
 
-   /**
+  /**
    * Ontology licence
    * @return licence
   **/
@@ -122,7 +121,7 @@ public class Ontology   {
     return this;
   }
 
-   /**
+  /**
    * Ontology database unique identifier
    * @return ontologyDbId
   **/
@@ -143,7 +142,7 @@ public class Ontology   {
     return this;
   }
 
-   /**
+  /**
    * Ontology name
    * @return ontologyName
   **/
@@ -164,7 +163,7 @@ public class Ontology   {
     return this;
   }
 
-   /**
+  /**
    * Ontology version (no specific format)
    * @return version
   **/

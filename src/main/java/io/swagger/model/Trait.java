@@ -15,7 +15,6 @@ import javax.validation.constraints.*;
  * Trait
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class Trait   {
   @JsonProperty("alternativeAbbreviations")
@@ -50,6 +49,9 @@ public class Trait   {
   @JsonProperty("traitDbId")
   private String traitDbId = null;
 
+  @JsonProperty("traitName")
+  private String traitName = null;
+
   @JsonProperty("xref")
   private String xref = null;
 
@@ -66,7 +68,7 @@ public class Trait   {
     return this;
   }
 
-   /**
+  /**
    * Other frequent abbreviations of the trait, if any. These abbreviations do not have to follow a convention
    * @return alternativeAbbreviations
   **/
@@ -86,7 +88,7 @@ public class Trait   {
     return this;
   }
 
-   /**
+  /**
    * A trait can be decomposed as \"Trait\" = \"Entity\" + \"Attribute\", the attribute is the observed feature (or characteristic) of the entity e.g., for \"grain colour\", attribute = \"colour\"
    * @return attribute
   **/
@@ -106,7 +108,7 @@ public class Trait   {
     return this;
   }
 
-   /**
+  /**
    * Trait class. (examples: \"morphological trait\", \"phenological trait\", \"agronomical trait\", \"physiological trait\", \"abiotic stress trait\", \"biotic stress trait\", \"biochemical trait\", \"quality traits trait\", \"fertility trait\", etc.)
    * @return propertyClass
   **/
@@ -126,7 +128,7 @@ public class Trait   {
     return this;
   }
 
-   /**
+  /**
    * The description of a trait
    * @return description
   **/
@@ -146,7 +148,7 @@ public class Trait   {
     return this;
   }
 
-   /**
+  /**
    * A trait can be decomposed as \"Trait\" = \"Entity\" + \"Attribute\", the entity is the part of the plant that the trait refers to e.g., for \"grain colour\", entity = \"grain\"
    * @return entity
   **/
@@ -166,7 +168,7 @@ public class Trait   {
     return this;
   }
 
-   /**
+  /**
    * Main abbreviation for trait name. (examples: \"Carotenoid content\" => \"CC\")
    * @return mainAbbreviation
   **/
@@ -186,11 +188,11 @@ public class Trait   {
     return this;
   }
 
-   /**
-   * The human readable name of a trait
+  /**
+   * DEPRECATED in v1.3 - Use \"traitName\"
    * @return name
   **/
-  @ApiModelProperty(value = "The human readable name of a trait")
+  @ApiModelProperty(value = "DEPRECATED in v1.3 - Use \"traitName\"")
 
 
   public String getName() {
@@ -206,7 +208,7 @@ public class Trait   {
     return this;
   }
 
-   /**
+  /**
    * Trait status (examples: \"recommended\", \"obsolete\", \"legacy\", etc.)
    * @return status
   **/
@@ -234,7 +236,7 @@ public class Trait   {
     return this;
   }
 
-   /**
+  /**
    * Other trait names
    * @return synonyms
   **/
@@ -254,7 +256,7 @@ public class Trait   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies a trait
    * @return traitDbId
   **/
@@ -269,12 +271,32 @@ public class Trait   {
     this.traitDbId = traitDbId;
   }
 
+  public Trait traitName(String traitName) {
+    this.traitName = traitName;
+    return this;
+  }
+
+  /**
+   * The human readable name of a trait
+   * @return traitName
+  **/
+  @ApiModelProperty(value = "The human readable name of a trait")
+
+
+  public String getTraitName() {
+    return traitName;
+  }
+
+  public void setTraitName(String traitName) {
+    this.traitName = traitName;
+  }
+
   public Trait xref(String xref) {
     this.xref = xref;
     return this;
   }
 
-   /**
+  /**
    * Cross reference of the trait to an external ontology or database term e.g., Xref to a trait ontology (TO) term
    * @return xref
   **/
@@ -309,12 +331,13 @@ public class Trait   {
         Objects.equals(this.status, trait.status) &&
         Objects.equals(this.synonyms, trait.synonyms) &&
         Objects.equals(this.traitDbId, trait.traitDbId) &&
+        Objects.equals(this.traitName, trait.traitName) &&
         Objects.equals(this.xref, trait.xref);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(alternativeAbbreviations, attribute, propertyClass, description, entity, mainAbbreviation, name, status, synonyms, traitDbId, xref);
+    return Objects.hash(alternativeAbbreviations, attribute, propertyClass, description, entity, mainAbbreviation, name, status, synonyms, traitDbId, traitName, xref);
   }
 
   @Override
@@ -332,6 +355,7 @@ public class Trait   {
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    synonyms: ").append(toIndentedString(synonyms)).append("\n");
     sb.append("    traitDbId: ").append(toIndentedString(traitDbId)).append("\n");
+    sb.append("    traitName: ").append(toIndentedString(traitName)).append("\n");
     sb.append("    xref: ").append(toIndentedString(xref)).append("\n");
     sb.append("}");
     return sb.toString();

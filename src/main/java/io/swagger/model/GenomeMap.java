@@ -14,7 +14,6 @@ import javax.validation.constraints.*;
  * GenomeMap
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class GenomeMap   {
   @JsonProperty("comments")
@@ -25,6 +24,9 @@ public class GenomeMap   {
 
   @JsonProperty("mapDbId")
   private String mapDbId = null;
+
+  @JsonProperty("mapName")
+  private String mapName = null;
 
   @JsonProperty("markerCount")
   private Integer markerCount = null;
@@ -49,7 +51,7 @@ public class GenomeMap   {
     return this;
   }
 
-   /**
+  /**
    * Additional comments
    * @return comments
   **/
@@ -69,7 +71,7 @@ public class GenomeMap   {
     return this;
   }
 
-   /**
+  /**
    * The number of linkage groups present in this genome map
    * @return linkageGroupCount
   **/
@@ -89,7 +91,7 @@ public class GenomeMap   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies this genome map
    * @return mapDbId
   **/
@@ -104,12 +106,32 @@ public class GenomeMap   {
     this.mapDbId = mapDbId;
   }
 
+  public GenomeMap mapName(String mapName) {
+    this.mapName = mapName;
+    return this;
+  }
+
+  /**
+   * A human readable name for this genome map
+   * @return mapName
+  **/
+  @ApiModelProperty(value = "A human readable name for this genome map")
+
+
+  public String getMapName() {
+    return mapName;
+  }
+
+  public void setMapName(String mapName) {
+    this.mapName = mapName;
+  }
+
   public GenomeMap markerCount(Integer markerCount) {
     this.markerCount = markerCount;
     return this;
   }
 
-   /**
+  /**
    * The number of markers present in this genome map
    * @return markerCount
   **/
@@ -129,11 +151,11 @@ public class GenomeMap   {
     return this;
   }
 
-   /**
-   * A human readable name for this genome map
+  /**
+   * DEPRECATED in v1.3 - Use \"mapName\"
    * @return name
   **/
-  @ApiModelProperty(value = "A human readable name for this genome map")
+  @ApiModelProperty(value = "DEPRECATED in v1.3 - Use \"mapName\"")
 
 
   public String getName() {
@@ -149,7 +171,7 @@ public class GenomeMap   {
     return this;
   }
 
-   /**
+  /**
    * The date this genome was published
    * @return publishedDate
   **/
@@ -170,7 +192,7 @@ public class GenomeMap   {
     return this;
   }
 
-   /**
+  /**
    * The name of the species 
    * @return species
   **/
@@ -190,7 +212,7 @@ public class GenomeMap   {
     return this;
   }
 
-   /**
+  /**
    * The type of map this represents, ussually \"Genetic\"
    * @return type
   **/
@@ -210,7 +232,7 @@ public class GenomeMap   {
     return this;
   }
 
-   /**
+  /**
    * The units used to describe the data in this map
    * @return unit
   **/
@@ -238,6 +260,7 @@ public class GenomeMap   {
     return Objects.equals(this.comments, genomeMap.comments) &&
         Objects.equals(this.linkageGroupCount, genomeMap.linkageGroupCount) &&
         Objects.equals(this.mapDbId, genomeMap.mapDbId) &&
+        Objects.equals(this.mapName, genomeMap.mapName) &&
         Objects.equals(this.markerCount, genomeMap.markerCount) &&
         Objects.equals(this.name, genomeMap.name) &&
         Objects.equals(this.publishedDate, genomeMap.publishedDate) &&
@@ -248,7 +271,7 @@ public class GenomeMap   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(comments, linkageGroupCount, mapDbId, markerCount, name, publishedDate, species, type, unit);
+    return Objects.hash(comments, linkageGroupCount, mapDbId, mapName, markerCount, name, publishedDate, species, type, unit);
   }
 
   @Override
@@ -259,6 +282,7 @@ public class GenomeMap   {
     sb.append("    comments: ").append(toIndentedString(comments)).append("\n");
     sb.append("    linkageGroupCount: ").append(toIndentedString(linkageGroupCount)).append("\n");
     sb.append("    mapDbId: ").append(toIndentedString(mapDbId)).append("\n");
+    sb.append("    mapName: ").append(toIndentedString(mapName)).append("\n");
     sb.append("    markerCount: ").append(toIndentedString(markerCount)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    publishedDate: ").append(toIndentedString(publishedDate)).append("\n");

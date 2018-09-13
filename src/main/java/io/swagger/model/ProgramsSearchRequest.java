@@ -13,7 +13,6 @@ import javax.validation.constraints.*;
  * ProgramsSearchRequest
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class ProgramsSearchRequest   {
   @JsonProperty("abbreviation")
@@ -37,12 +36,15 @@ public class ProgramsSearchRequest   {
   @JsonProperty("programDbId")
   private String programDbId = null;
 
+  @JsonProperty("programName")
+  private String programName = null;
+
   public ProgramsSearchRequest abbreviation(String abbreviation) {
     this.abbreviation = abbreviation;
     return this;
   }
 
-   /**
+  /**
    * An abbreviation of a program to search for
    * @return abbreviation
   **/
@@ -62,7 +64,7 @@ public class ProgramsSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * The name or identifier of the program leader to search for
    * @return leadPerson
   **/
@@ -82,11 +84,11 @@ public class ProgramsSearchRequest   {
     return this;
   }
 
-   /**
-   * A name of a program to search for
+  /**
+   * DEPRECATED in v1.3 - Use \"programName\"
    * @return name
   **/
-  @ApiModelProperty(value = "A name of a program to search for")
+  @ApiModelProperty(value = "DEPRECATED in v1.3 - Use \"programName\"")
 
 
   public String getName() {
@@ -102,7 +104,7 @@ public class ProgramsSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * A program objective to search for
    * @return objective
   **/
@@ -122,7 +124,7 @@ public class ProgramsSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * Which page of the \"data\" array to return. The page indexing starts at 0 (page=0 will return the first page). Default is 0.
    * @return page
   **/
@@ -142,7 +144,7 @@ public class ProgramsSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * The maximum number of items to return per page of the \"data\" array. Default is 1000.
    * @return pageSize
   **/
@@ -162,7 +164,7 @@ public class ProgramsSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * A program identifier to search for
    * @return programDbId
   **/
@@ -175,6 +177,26 @@ public class ProgramsSearchRequest   {
 
   public void setProgramDbId(String programDbId) {
     this.programDbId = programDbId;
+  }
+
+  public ProgramsSearchRequest programName(String programName) {
+    this.programName = programName;
+    return this;
+  }
+
+  /**
+   * A name of a program to search for
+   * @return programName
+  **/
+  @ApiModelProperty(value = "A name of a program to search for")
+
+
+  public String getProgramName() {
+    return programName;
+  }
+
+  public void setProgramName(String programName) {
+    this.programName = programName;
   }
 
 
@@ -193,12 +215,13 @@ public class ProgramsSearchRequest   {
         Objects.equals(this.objective, programsSearchRequest.objective) &&
         Objects.equals(this.page, programsSearchRequest.page) &&
         Objects.equals(this.pageSize, programsSearchRequest.pageSize) &&
-        Objects.equals(this.programDbId, programsSearchRequest.programDbId);
+        Objects.equals(this.programDbId, programsSearchRequest.programDbId) &&
+        Objects.equals(this.programName, programsSearchRequest.programName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(abbreviation, leadPerson, name, objective, page, pageSize, programDbId);
+    return Objects.hash(abbreviation, leadPerson, name, objective, page, pageSize, programDbId, programName);
   }
 
   @Override
@@ -213,6 +236,7 @@ public class ProgramsSearchRequest   {
     sb.append("    page: ").append(toIndentedString(page)).append("\n");
     sb.append("    pageSize: ").append(toIndentedString(pageSize)).append("\n");
     sb.append("    programDbId: ").append(toIndentedString(programDbId)).append("\n");
+    sb.append("    programName: ").append(toIndentedString(programName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

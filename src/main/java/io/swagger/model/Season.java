@@ -13,7 +13,6 @@ import javax.validation.constraints.*;
  * Season
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class Season   {
   @JsonProperty("season")
@@ -30,7 +29,7 @@ public class Season   {
     return this;
   }
 
-   /**
+  /**
    * Name of the season. ex. 'Spring', 'Q2', 'Season A', etc.
    * @return season
   **/
@@ -50,7 +49,7 @@ public class Season   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies a season
    * @return seasonDbId
   **/
@@ -70,7 +69,7 @@ public class Season   {
     return this;
   }
 
-   /**
+  /**
    * The 4 digit year of the season.
    * @return year
   **/

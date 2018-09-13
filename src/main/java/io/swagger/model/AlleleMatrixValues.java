@@ -15,7 +15,6 @@ import javax.validation.constraints.*;
  * AlleleMatrixValues
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class AlleleMatrixValues   {
   @JsonProperty("data")
@@ -35,7 +34,7 @@ public class AlleleMatrixValues   {
     return this;
   }
 
-   /**
+  /**
    * Is an array of arrays; each inner array has three entries: ```markerDbId```, ```markerprofileDbId```, ```alleleCall```. Scores have to be represented as described further up. e.g. unknown data as \"N\", etc. Missing data can be skipped.
    * @return data
   **/

@@ -14,7 +14,6 @@ import javax.validation.constraints.*;
  * VendorPlateRequestSamples
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class VendorPlateRequestSamples   {
   @JsonProperty("column")
@@ -46,7 +45,7 @@ public class VendorPlateRequestSamples   {
     return this;
   }
 
-   /**
+  /**
    * Get column
    * @return column
   **/
@@ -66,7 +65,7 @@ public class VendorPlateRequestSamples   {
     return this;
   }
 
-   /**
+  /**
    * Get concentration
    * @return concentration
   **/
@@ -86,7 +85,7 @@ public class VendorPlateRequestSamples   {
     return this;
   }
 
-   /**
+  /**
    * Get row
    * @return row
   **/
@@ -106,7 +105,7 @@ public class VendorPlateRequestSamples   {
     return this;
   }
 
-   /**
+  /**
    * Get sampleDbId
    * @return sampleDbId
   **/
@@ -126,7 +125,7 @@ public class VendorPlateRequestSamples   {
     return this;
   }
 
-   /**
+  /**
    * Get taxonId
    * @return taxonId
   **/
@@ -147,7 +146,7 @@ public class VendorPlateRequestSamples   {
     return this;
   }
 
-   /**
+  /**
    * Get tissueType
    * @return tissueType
   **/
@@ -167,7 +166,7 @@ public class VendorPlateRequestSamples   {
     return this;
   }
 
-   /**
+  /**
    * Get volume
    * @return volume
   **/
@@ -187,7 +186,7 @@ public class VendorPlateRequestSamples   {
     return this;
   }
 
-   /**
+  /**
    * Get well
    * @return well
   **/

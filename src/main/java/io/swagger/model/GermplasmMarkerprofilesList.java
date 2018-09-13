@@ -15,7 +15,6 @@ import javax.validation.constraints.*;
  * GermplasmMarkerprofilesList
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class GermplasmMarkerprofilesList   {
   @JsonProperty("germplasmDbId")
@@ -30,7 +29,7 @@ public class GermplasmMarkerprofilesList   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies a germplasm within the given database server
    * @return germplasmDbId
   **/
@@ -58,7 +57,7 @@ public class GermplasmMarkerprofilesList   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies a marker profile within the given database server
    * @return markerprofileDbIds
   **/

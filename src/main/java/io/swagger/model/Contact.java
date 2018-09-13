@@ -13,7 +13,6 @@ import javax.validation.constraints.*;
  * Contact
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class Contact   {
   @JsonProperty("contactDbId")
@@ -39,7 +38,7 @@ public class Contact   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies this contact
    * @return contactDbId
   **/
@@ -59,7 +58,7 @@ public class Contact   {
     return this;
   }
 
-   /**
+  /**
    * The contacts email address 
    * @return email
   **/
@@ -79,7 +78,7 @@ public class Contact   {
     return this;
   }
 
-   /**
+  /**
    * The name of the institution which this contact is part of
    * @return instituteName
   **/
@@ -99,7 +98,7 @@ public class Contact   {
     return this;
   }
 
-   /**
+  /**
    * The full name of this contact person
    * @return name
   **/
@@ -119,7 +118,7 @@ public class Contact   {
     return this;
   }
 
-   /**
+  /**
    * The Open Researcher and Contributor ID for this contact person (orcid.org)
    * @return orcid
   **/
@@ -139,7 +138,7 @@ public class Contact   {
     return this;
   }
 
-   /**
+  /**
    * The type of person this contact represents (ex: Coordinator, Scientist, PI, etc.)
    * @return type
   **/

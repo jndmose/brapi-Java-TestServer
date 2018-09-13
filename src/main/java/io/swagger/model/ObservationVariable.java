@@ -19,7 +19,6 @@ import javax.validation.constraints.*;
  * ObservationVariable
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class ObservationVariable   {
   @JsonProperty("contextOfUse")
@@ -50,11 +49,11 @@ public class ObservationVariable   {
   @JsonProperty("name")
   private String name = null;
 
-  @JsonProperty("observationVariableName")
-  private String observationVariableName = null;
-  
   @JsonProperty("observationVariableDbId")
   private String observationVariableDbId = null;
+
+  @JsonProperty("observationVariableName")
+  private String observationVariableName = null;
 
   @JsonProperty("ontologyDbId")
   private String ontologyDbId = null;
@@ -72,7 +71,7 @@ public class ObservationVariable   {
   private String status = null;
 
   @JsonProperty("submissionTimestamp")
-  private OffsetDateTime submissionTimeStamp = null;
+  private OffsetDateTime submissionTimestamp = null;
 
   @JsonProperty("synonyms")
   @Valid
@@ -97,7 +96,7 @@ public class ObservationVariable   {
     return this;
   }
 
-   /**
+  /**
    * Indication of how trait is routinely used. (examples: [\"Trial evaluation\", \"Nursery evaluation\"])
    * @return contextOfUse
   **/
@@ -117,7 +116,7 @@ public class ObservationVariable   {
     return this;
   }
 
-   /**
+  /**
    * Crop name (examples: \"Maize\", \"Wheat\")
    * @return crop
   **/
@@ -137,7 +136,7 @@ public class ObservationVariable   {
     return this;
   }
 
-   /**
+  /**
    * Date of submission of the variable (ISO 8601).
    * @return date
   **/
@@ -157,7 +156,7 @@ public class ObservationVariable   {
     return this;
   }
 
-   /**
+  /**
    * Variable default value. (examples: \"red\", \"2.3\", etc.)
    * @return defaultValue
   **/
@@ -178,7 +177,7 @@ public class ObservationVariable   {
     return this;
   }
 
-   /**
+  /**
    * Growth stage at which measurement is made (examples: \"flowering\")
    * @return growthStage
   **/
@@ -198,7 +197,7 @@ public class ObservationVariable   {
     return this;
   }
 
-   /**
+  /**
    * Name of institution submitting the variable
    * @return institution
   **/
@@ -218,7 +217,7 @@ public class ObservationVariable   {
     return this;
   }
 
-   /**
+  /**
    * 2 letter ISO code for the language of submission of the variable.
    * @return language
   **/
@@ -238,7 +237,7 @@ public class ObservationVariable   {
     return this;
   }
 
-   /**
+  /**
    * The description of the method used to collect data for this variable
    * @return method
   **/
@@ -260,12 +259,11 @@ public class ObservationVariable   {
     return this;
   }
 
-   /**
-   * Variable name (usually a short name)
+  /**
+   * DEPRECATED in v1.3 - Use \"observationVariableName\"
    * @return name
   **/
-  @ApiModelProperty(required = true, value = "Variable name (usually a short name)")
-  @NotNull
+  @ApiModelProperty(value = "DEPRECATED in v1.3 - Use \"observationVariableName\"")
 
 
   public String getName() {
@@ -276,33 +274,12 @@ public class ObservationVariable   {
     this.name = name;
   }
 
-  public ObservationVariable observationVariableName(String observationVariableName) {
-    this.observationVariableName = observationVariableName;
-    return this;
-  }
-
-   /**
-   * Variable unique identifier
-   * @return observationVariableDbId
-  **/
-  @ApiModelProperty(required = true, value = "Variable unique identifier")
-  @NotNull
-
-
-  public String getObservationVariableName() {
-    return observationVariableName;
-  }
-
-  public void setObservationVariableName(String observationVariableName) {
-    this.observationVariableName = observationVariableName;
-  }
-
   public ObservationVariable observationVariableDbId(String observationVariableDbId) {
     this.observationVariableDbId = observationVariableDbId;
     return this;
   }
 
-   /**
+  /**
    * Variable unique identifier
    * @return observationVariableDbId
   **/
@@ -318,12 +295,33 @@ public class ObservationVariable   {
     this.observationVariableDbId = observationVariableDbId;
   }
 
+  public ObservationVariable observationVariableName(String observationVariableName) {
+    this.observationVariableName = observationVariableName;
+    return this;
+  }
+
+  /**
+   * Variable name (usually a short name)
+   * @return observationVariableName
+  **/
+  @ApiModelProperty(required = true, value = "Variable name (usually a short name)")
+  @NotNull
+
+
+  public String getObservationVariableName() {
+    return observationVariableName;
+  }
+
+  public void setObservationVariableName(String observationVariableName) {
+    this.observationVariableName = observationVariableName;
+  }
+
   public ObservationVariable ontologyDbId(String ontologyDbId) {
     this.ontologyDbId = ontologyDbId;
     return this;
   }
 
-   /**
+  /**
    * Variable ontology unique identifier
    * @return ontologyDbId
   **/
@@ -344,7 +342,7 @@ public class ObservationVariable   {
     return this;
   }
 
-   /**
+  /**
    * Variable ontology name (usually a short name)
    * @return ontologyName
   **/
@@ -365,7 +363,7 @@ public class ObservationVariable   {
     return this;
   }
 
-   /**
+  /**
    * The description of the reference scale and units used on the collected data for this variable
    * @return scale
   **/
@@ -387,7 +385,7 @@ public class ObservationVariable   {
     return this;
   }
 
-   /**
+  /**
    * Name of scientist submitting the variable.
    * @return scientist
   **/
@@ -407,7 +405,7 @@ public class ObservationVariable   {
     return this;
   }
 
-   /**
+  /**
    * Variable status. (examples: \"recommended\", \"obsolete\", \"legacy\", etc.)
    * @return status
   **/
@@ -422,25 +420,25 @@ public class ObservationVariable   {
     this.status = status;
   }
 
-  public ObservationVariable submissionTimeStamp(OffsetDateTime submissionTimeStamp) {
-    this.submissionTimeStamp = submissionTimeStamp;
+  public ObservationVariable submissionTimestamp(OffsetDateTime submissionTimestamp) {
+    this.submissionTimestamp = submissionTimestamp;
     return this;
   }
 
-   /**
+  /**
    * Timestamp when the Variable was added
-   * @return submissionTimeStamp
+   * @return submissionTimestamp
   **/
   @ApiModelProperty(value = "Timestamp when the Variable was added")
 
   @Valid
 
-  public OffsetDateTime getSubmissionTimeStamp() {
-    return submissionTimeStamp;
+  public OffsetDateTime getSubmissionTimestamp() {
+    return submissionTimestamp;
   }
 
-  public void setSubmissionTimeStamp(OffsetDateTime submissionTimeStamp) {
-    this.submissionTimeStamp = submissionTimeStamp;
+  public void setSubmissionTimestamp(OffsetDateTime submissionTimestamp) {
+    this.submissionTimestamp = submissionTimestamp;
   }
 
   public ObservationVariable synonyms(List<String> synonyms) {
@@ -456,7 +454,7 @@ public class ObservationVariable   {
     return this;
   }
 
-   /**
+  /**
    * Other variable names
    * @return synonyms
   **/
@@ -476,7 +474,7 @@ public class ObservationVariable   {
     return this;
   }
 
-   /**
+  /**
    * The description of the trait which is being examined for this variable
    * @return trait
   **/
@@ -498,7 +496,7 @@ public class ObservationVariable   {
     return this;
   }
 
-   /**
+  /**
    * Cross reference of the variable term to a term from an external ontology or to a database of a major system.
    * @return xref
   **/
@@ -533,12 +531,13 @@ public class ObservationVariable   {
         Objects.equals(this.method, observationVariable.method) &&
         Objects.equals(this.name, observationVariable.name) &&
         Objects.equals(this.observationVariableDbId, observationVariable.observationVariableDbId) &&
+        Objects.equals(this.observationVariableName, observationVariable.observationVariableName) &&
         Objects.equals(this.ontologyDbId, observationVariable.ontologyDbId) &&
         Objects.equals(this.ontologyName, observationVariable.ontologyName) &&
         Objects.equals(this.scale, observationVariable.scale) &&
         Objects.equals(this.scientist, observationVariable.scientist) &&
         Objects.equals(this.status, observationVariable.status) &&
-        Objects.equals(this.submissionTimeStamp, observationVariable.submissionTimeStamp) &&
+        Objects.equals(this.submissionTimestamp, observationVariable.submissionTimestamp) &&
         Objects.equals(this.synonyms, observationVariable.synonyms) &&
         Objects.equals(this.trait, observationVariable.trait) &&
         Objects.equals(this.xref, observationVariable.xref);
@@ -546,7 +545,7 @@ public class ObservationVariable   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(contextOfUse, crop, date, defaultValue, growthStage, institution, language, method, name, observationVariableDbId, ontologyDbId, ontologyName, scale, scientist, status, submissionTimeStamp, synonyms, trait, xref);
+    return Objects.hash(contextOfUse, crop, date, defaultValue, growthStage, institution, language, method, name, observationVariableDbId, observationVariableName, ontologyDbId, ontologyName, scale, scientist, status, submissionTimestamp, synonyms, trait, xref);
   }
 
   @Override
@@ -564,12 +563,13 @@ public class ObservationVariable   {
     sb.append("    method: ").append(toIndentedString(method)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    observationVariableDbId: ").append(toIndentedString(observationVariableDbId)).append("\n");
+    sb.append("    observationVariableName: ").append(toIndentedString(observationVariableName)).append("\n");
     sb.append("    ontologyDbId: ").append(toIndentedString(ontologyDbId)).append("\n");
     sb.append("    ontologyName: ").append(toIndentedString(ontologyName)).append("\n");
     sb.append("    scale: ").append(toIndentedString(scale)).append("\n");
     sb.append("    scientist: ").append(toIndentedString(scientist)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    submissionTimeStamp: ").append(toIndentedString(submissionTimeStamp)).append("\n");
+    sb.append("    submissionTimestamp: ").append(toIndentedString(submissionTimestamp)).append("\n");
     sb.append("    synonyms: ").append(toIndentedString(synonyms)).append("\n");
     sb.append("    trait: ").append(toIndentedString(trait)).append("\n");
     sb.append("    xref: ").append(toIndentedString(xref)).append("\n");

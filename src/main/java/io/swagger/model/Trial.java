@@ -21,7 +21,6 @@ import javax.validation.constraints.*;
  * Trial
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class Trial   {
   @JsonProperty("active")
@@ -65,7 +64,7 @@ public class Trial   {
     return this;
   }
 
-   /**
+  /**
    * Is this trail currently active
    * @return active
   **/
@@ -93,7 +92,7 @@ public class Trial   {
     return this;
   }
 
-   /**
+  /**
    * Additional arbitrary info
    * @return additionalInfo
   **/
@@ -121,7 +120,7 @@ public class Trial   {
     return this;
   }
 
-   /**
+  /**
    * List of contact entities associated with this trial
    * @return contacts
   **/
@@ -142,7 +141,7 @@ public class Trial   {
     return this;
   }
 
-   /**
+  /**
    * Get datasetAuthorship
    * @return datasetAuthorship
   **/
@@ -163,7 +162,7 @@ public class Trial   {
     return this;
   }
 
-   /**
+  /**
    * The date this trial ends
    * @return endDate
   **/
@@ -184,7 +183,7 @@ public class Trial   {
     return this;
   }
 
-   /**
+  /**
    * A program identifier to search for
    * @return programDbId
   **/
@@ -204,7 +203,7 @@ public class Trial   {
     return this;
   }
 
-   /**
+  /**
    * The human readable name of a program
    * @return programName
   **/
@@ -224,7 +223,7 @@ public class Trial   {
     return this;
   }
 
-   /**
+  /**
    * The date this trial started
    * @return startDate
   **/
@@ -253,7 +252,7 @@ public class Trial   {
     return this;
   }
 
-   /**
+  /**
    * List of studies inside this trial
    * @return studies
   **/
@@ -274,7 +273,7 @@ public class Trial   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies a trial
    * @return trialDbId
   **/
@@ -294,7 +293,7 @@ public class Trial   {
     return this;
   }
 
-   /**
+  /**
    * The human readable name of a trial
    * @return trialName
   **/

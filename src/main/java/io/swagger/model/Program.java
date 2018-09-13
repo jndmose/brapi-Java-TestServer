@@ -13,7 +13,6 @@ import javax.validation.constraints.*;
  * Program
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class Program   {
   @JsonProperty("abbreviation")
@@ -31,12 +30,15 @@ public class Program   {
   @JsonProperty("programDbId")
   private String programDbId = null;
 
+  @JsonProperty("programName")
+  private String programName = null;
+
   public Program abbreviation(String abbreviation) {
     this.abbreviation = abbreviation;
     return this;
   }
 
-   /**
+  /**
    * An abbreviation which represnts this program
    * @return abbreviation
   **/
@@ -56,7 +58,7 @@ public class Program   {
     return this;
   }
 
-   /**
+  /**
    * The name or identifier of the program leader
    * @return leadPerson
   **/
@@ -76,11 +78,11 @@ public class Program   {
     return this;
   }
 
-   /**
-   * Human readable name of the program
+  /**
+   * DEPRECATED in v1.3 - Use \"programName\"
    * @return name
   **/
-  @ApiModelProperty(value = "Human readable name of the program")
+  @ApiModelProperty(value = "DEPRECATED in v1.3 - Use \"programName\"")
 
 
   public String getName() {
@@ -96,7 +98,7 @@ public class Program   {
     return this;
   }
 
-   /**
+  /**
    * The primary objective of the program
    * @return objective
   **/
@@ -116,7 +118,7 @@ public class Program   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies the program
    * @return programDbId
   **/
@@ -129,6 +131,26 @@ public class Program   {
 
   public void setProgramDbId(String programDbId) {
     this.programDbId = programDbId;
+  }
+
+  public Program programName(String programName) {
+    this.programName = programName;
+    return this;
+  }
+
+  /**
+   * Human readable name of the program
+   * @return programName
+  **/
+  @ApiModelProperty(value = "Human readable name of the program")
+
+
+  public String getProgramName() {
+    return programName;
+  }
+
+  public void setProgramName(String programName) {
+    this.programName = programName;
   }
 
 
@@ -145,12 +167,13 @@ public class Program   {
         Objects.equals(this.leadPerson, program.leadPerson) &&
         Objects.equals(this.name, program.name) &&
         Objects.equals(this.objective, program.objective) &&
-        Objects.equals(this.programDbId, program.programDbId);
+        Objects.equals(this.programDbId, program.programDbId) &&
+        Objects.equals(this.programName, program.programName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(abbreviation, leadPerson, name, objective, programDbId);
+    return Objects.hash(abbreviation, leadPerson, name, objective, programDbId, programName);
   }
 
   @Override
@@ -163,6 +186,7 @@ public class Program   {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    objective: ").append(toIndentedString(objective)).append("\n");
     sb.append("    programDbId: ").append(toIndentedString(programDbId)).append("\n");
+    sb.append("    programName: ").append(toIndentedString(programName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

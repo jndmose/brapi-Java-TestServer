@@ -13,9 +13,11 @@ import javax.validation.constraints.*;
  * VendorSpecificationPlatformDeliverables
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class VendorSpecificationPlatformDeliverables   {
+  @JsonProperty("deliverableName")
+  private String deliverableName = null;
+
   @JsonProperty("description")
   private String description = null;
 
@@ -25,12 +27,32 @@ public class VendorSpecificationPlatformDeliverables   {
   @JsonProperty("name")
   private String name = null;
 
+  public VendorSpecificationPlatformDeliverables deliverableName(String deliverableName) {
+    this.deliverableName = deliverableName;
+    return this;
+  }
+
+  /**
+   * Human readable name of a vendor deliverable
+   * @return deliverableName
+  **/
+  @ApiModelProperty(value = "Human readable name of a vendor deliverable")
+
+
+  public String getDeliverableName() {
+    return deliverableName;
+  }
+
+  public void setDeliverableName(String deliverableName) {
+    this.deliverableName = deliverableName;
+  }
+
   public VendorSpecificationPlatformDeliverables description(String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Get description
    * @return description
   **/
@@ -50,7 +72,7 @@ public class VendorSpecificationPlatformDeliverables   {
     return this;
   }
 
-   /**
+  /**
    * Get format
    * @return format
   **/
@@ -70,11 +92,11 @@ public class VendorSpecificationPlatformDeliverables   {
     return this;
   }
 
-   /**
-   * Get name
+  /**
+   * DEPRECATED in v1.3 - Use \"deliverableName\"
    * @return name
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "DEPRECATED in v1.3 - Use \"deliverableName\"")
 
 
   public String getName() {
@@ -95,14 +117,15 @@ public class VendorSpecificationPlatformDeliverables   {
       return false;
     }
     VendorSpecificationPlatformDeliverables vendorSpecificationPlatformDeliverables = (VendorSpecificationPlatformDeliverables) o;
-    return Objects.equals(this.description, vendorSpecificationPlatformDeliverables.description) &&
+    return Objects.equals(this.deliverableName, vendorSpecificationPlatformDeliverables.deliverableName) &&
+        Objects.equals(this.description, vendorSpecificationPlatformDeliverables.description) &&
         Objects.equals(this.format, vendorSpecificationPlatformDeliverables.format) &&
         Objects.equals(this.name, vendorSpecificationPlatformDeliverables.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(description, format, name);
+    return Objects.hash(deliverableName, description, format, name);
   }
 
   @Override
@@ -110,6 +133,7 @@ public class VendorSpecificationPlatformDeliverables   {
     StringBuilder sb = new StringBuilder();
     sb.append("class VendorSpecificationPlatformDeliverables {\n");
     
+    sb.append("    deliverableName: ").append(toIndentedString(deliverableName)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    format: ").append(toIndentedString(format)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");

@@ -19,7 +19,6 @@ import javax.validation.constraints.*;
  * VendorSpecificationPlatform
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class VendorSpecificationPlatform   {
   @JsonProperty("contactEmail")
@@ -68,7 +67,7 @@ public class VendorSpecificationPlatform   {
     return this;
   }
 
-   /**
+  /**
    * The primary email address to contact a particular vendor platform
    * @return contactEmail
   **/
@@ -88,7 +87,7 @@ public class VendorSpecificationPlatform   {
     return this;
   }
 
-   /**
+  /**
    * The name or identifier of the primary vendor platfrom contact
    * @return contactName
   **/
@@ -108,7 +107,7 @@ public class VendorSpecificationPlatform   {
     return this;
   }
 
-   /**
+  /**
    * The phone number used to contact the vendor about a particular platform
    * @return contactPhone
   **/
@@ -136,7 +135,7 @@ public class VendorSpecificationPlatform   {
     return this;
   }
 
-   /**
+  /**
    * List of specific deliverables provided by the vendor platform
    * @return deliverables
   **/
@@ -157,7 +156,7 @@ public class VendorSpecificationPlatform   {
     return this;
   }
 
-   /**
+  /**
    * Description of the vendor platform
    * @return platformDescription
   **/
@@ -177,7 +176,7 @@ public class VendorSpecificationPlatform   {
     return this;
   }
 
-   /**
+  /**
    * The human readable name of a platform
    * @return platformName
   **/
@@ -197,7 +196,7 @@ public class VendorSpecificationPlatform   {
     return this;
   }
 
-   /**
+  /**
    * The URL for a vendor platform
    * @return platformURL
   **/
@@ -217,7 +216,7 @@ public class VendorSpecificationPlatform   {
     return this;
   }
 
-   /**
+  /**
    * The street address for a vendor platform
    * @return shippingAddress
   **/
@@ -237,7 +236,7 @@ public class VendorSpecificationPlatform   {
     return this;
   }
 
-   /**
+  /**
    * Additional arbitrary requirements for a particular platform
    * @return specificRequirements
   **/
@@ -257,7 +256,7 @@ public class VendorSpecificationPlatform   {
     return this;
   }
 
-   /**
+  /**
    * Set of standard requirements for a vendor platform
    * @return standardRequirements
   **/
@@ -286,7 +285,7 @@ public class VendorSpecificationPlatform   {
     return this;
   }
 
-   /**
+  /**
    * List of possible status messages for a vendor platform
    * @return statuses
   **/
@@ -307,7 +306,7 @@ public class VendorSpecificationPlatform   {
     return this;
   }
 
-   /**
+  /**
    * Details about the systems used to track taxonomies
    * @return taxonomyIdSystem
   **/
@@ -328,7 +327,7 @@ public class VendorSpecificationPlatform   {
     return this;
   }
 
-   /**
+  /**
    * Details about the systems used to track sample IDs
    * @return tissueIdSystem
   **/

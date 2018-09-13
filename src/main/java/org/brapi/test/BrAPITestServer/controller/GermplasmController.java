@@ -21,8 +21,8 @@ import io.swagger.api.GermplasmApi;
 import io.swagger.api.GermplasmSearchApi;
 import io.swagger.model.BreedingMethod;
 import io.swagger.model.BreedingMethodResponse;
-import io.swagger.model.BreedingMethodResponse1;
-import io.swagger.model.BreedingMethodResponseResult;
+import io.swagger.model.BreedingMethodsResponse;
+import io.swagger.model.BreedingMethodsResponseResult;
 import io.swagger.model.Germplasm;
 import io.swagger.model.GermplasmAttribute;
 import io.swagger.model.GermplasmAttributeList;
@@ -162,28 +162,28 @@ public class GermplasmController extends BrAPIController
 	}
 
 	@Override
-	public ResponseEntity<BreedingMethodResponse1> breedingmethodsBreedingMethodDbIdGet(
+	public ResponseEntity<BreedingMethodResponse> breedingmethodsBreedingMethodDbIdGet(
 			@PathVariable("breedingMethodDbId") String breedingMethodDbId) {
 		BreedingMethod result = germplasmService.getBreedingMethod(breedingMethodDbId);
 
-		BreedingMethodResponse1 response = new BreedingMethodResponse1();
+		BreedingMethodResponse response = new BreedingMethodResponse();
 		response.setMetadata(generateEmptyMetadata());
 		response.setResult(result);
-		return new ResponseEntity<BreedingMethodResponse1>(response, HttpStatus.OK);
+		return new ResponseEntity<BreedingMethodResponse>(response, HttpStatus.OK);
 	}
 
 	@Override
-	public ResponseEntity<BreedingMethodResponse> breedingmethodsGet(@Valid Integer pageSize, @Valid Integer page)
+	public ResponseEntity<BreedingMethodsResponse> breedingmethodsGet(@Valid Integer pageSize, @Valid Integer page)
 			throws BrAPIServerException {
 		Metadata metadata = generateMetaDataTemplate(page, pageSize);
 		List<BreedingMethod> data = germplasmService.getBreedingMethods(metadata);
 
-		BreedingMethodResponseResult result = new BreedingMethodResponseResult();
+		BreedingMethodsResponseResult result = new BreedingMethodsResponseResult();
 		result.setData(data);
-		BreedingMethodResponse response = new BreedingMethodResponse();
+		BreedingMethodsResponse response = new BreedingMethodsResponse();
 		response.setMetadata(metadata);
 		response.setResult(result);
-		return new ResponseEntity<BreedingMethodResponse>(response, HttpStatus.OK);
+		return new ResponseEntity<BreedingMethodsResponse>(response, HttpStatus.OK);
 
 	}
 }

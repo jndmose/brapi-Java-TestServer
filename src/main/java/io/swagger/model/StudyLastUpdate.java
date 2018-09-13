@@ -15,7 +15,6 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "The date and time when this study was last modified")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class StudyLastUpdate   {
   @JsonProperty("timestamp")
@@ -29,7 +28,7 @@ public class StudyLastUpdate   {
     return this;
   }
 
-   /**
+  /**
    * Get timestamp
    * @return timestamp
   **/
@@ -50,7 +49,7 @@ public class StudyLastUpdate   {
     return this;
   }
 
-   /**
+  /**
    * Get version
    * @return version
   **/

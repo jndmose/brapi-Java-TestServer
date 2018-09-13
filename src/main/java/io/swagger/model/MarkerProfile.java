@@ -16,7 +16,6 @@ import javax.validation.constraints.*;
  * MarkerProfile
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class MarkerProfile   {
   @JsonProperty("analysisMethod")
@@ -43,7 +42,7 @@ public class MarkerProfile   {
     return this;
   }
 
-   /**
+  /**
    * The type of analysis performed to determine a set of marker data
    * @return analysisMethod
   **/
@@ -71,7 +70,7 @@ public class MarkerProfile   {
     return this;
   }
 
-   /**
+  /**
    * <strong>Required</strong> array of marker-name/score pairs
    * @return data
   **/
@@ -92,7 +91,7 @@ public class MarkerProfile   {
     return this;
   }
 
-   /**
+  /**
    * <strong>Required</strong>
    * @return extractDbId
   **/
@@ -112,7 +111,7 @@ public class MarkerProfile   {
     return this;
   }
 
-   /**
+  /**
    * <strong>Required</strong>
    * @return germplasmDbId
   **/
@@ -132,7 +131,7 @@ public class MarkerProfile   {
     return this;
   }
 
-   /**
+  /**
    * Unique in the database. Can be a catenation of unique IDs for germplasm and extract. <strong>Required</strong>
    * @return markerprofileDbId
   **/
@@ -152,7 +151,7 @@ public class MarkerProfile   {
     return this;
   }
 
-   /**
+  /**
    * Human readable display name for this marker profile
    * @return uniqueDisplayName
   **/

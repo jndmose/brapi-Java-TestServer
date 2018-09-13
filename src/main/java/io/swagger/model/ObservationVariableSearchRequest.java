@@ -15,7 +15,6 @@ import javax.validation.constraints.*;
  * ObservationVariableSearchRequest
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class ObservationVariableSearchRequest   {
   @JsonProperty("datatypes")
@@ -69,7 +68,7 @@ public class ObservationVariableSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * List of scale data types to filter search results
    * @return datatypes
   **/
@@ -97,7 +96,7 @@ public class ObservationVariableSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * List of methods to filter search results
    * @return methodDbIds
   **/
@@ -125,7 +124,7 @@ public class ObservationVariableSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * List of human readable observation variable names to search for
    * @return names
   **/
@@ -153,7 +152,7 @@ public class ObservationVariableSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * List of observation variable IDs to search for
    * @return observationVariableDbIds
   **/
@@ -181,7 +180,7 @@ public class ObservationVariableSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * List of ontology IDs to search for
    * @return ontologyDbIds
   **/
@@ -209,7 +208,7 @@ public class ObservationVariableSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * List of ontology IDs to search for
    * @return ontologyXrefs
   **/
@@ -229,7 +228,7 @@ public class ObservationVariableSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * Which page of the \"data\" array to return. The page indexing starts at 0 (page=0 will return the first page). Default is 0.
    * @return page
   **/
@@ -249,7 +248,7 @@ public class ObservationVariableSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * The maximum number of items to return per page of the \"data\" array. Default is 1000.
    * @return pageSize
   **/
@@ -277,7 +276,7 @@ public class ObservationVariableSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * List of scales to filter search results
    * @return scaleDbIds
   **/
@@ -305,7 +304,7 @@ public class ObservationVariableSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * List of trait classes to filter search results
    * @return traitClasses
   **/

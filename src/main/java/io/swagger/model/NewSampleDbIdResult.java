@@ -14,7 +14,6 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "List of sample references which have been created or updated")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class NewSampleDbIdResult   {
   @JsonProperty("sampleDbId")
@@ -28,7 +27,7 @@ public class NewSampleDbIdResult   {
     return this;
   }
 
-   /**
+  /**
    * Get sampleDbId
    * @return sampleDbId
   **/
@@ -48,7 +47,7 @@ public class NewSampleDbIdResult   {
     return this;
   }
 
-   /**
+  /**
    * ** Deprecated ** use sampleDbId
    * @return sampleId
   **/

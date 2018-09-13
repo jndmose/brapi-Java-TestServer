@@ -17,7 +17,6 @@ import javax.validation.constraints.*;
  * Metadata
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class Metadata   {
   @JsonProperty("datafiles")
@@ -44,7 +43,7 @@ public class Metadata   {
     return this;
   }
 
-   /**
+  /**
    * The datafiles key contains a list of file paths, which can be relative or complete URLs. These files contain additional information related to the returned object and can be retrieved by a subsequent call. The empty list should be returned if no additional data files are present.
    * @return datafiles
   **/
@@ -64,7 +63,7 @@ public class Metadata   {
     return this;
   }
 
-   /**
+  /**
    * Get pagination
    * @return pagination
   **/
@@ -93,7 +92,7 @@ public class Metadata   {
     return this;
   }
 
-   /**
+  /**
    * The status field contains a list of informational status messages from the server. If no status is reported, an empty list should be returned. See Error Reporting for more information.
    * @return status
   **/

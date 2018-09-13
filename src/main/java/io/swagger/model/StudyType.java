@@ -13,7 +13,6 @@ import javax.validation.constraints.*;
  * StudyType
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class StudyType   {
   @JsonProperty("description")
@@ -22,12 +21,15 @@ public class StudyType   {
   @JsonProperty("name")
   private String name = null;
 
+  @JsonProperty("studyTypeName")
+  private String studyTypeName = null;
+
   public StudyType description(String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * The description of this study type
    * @return description
   **/
@@ -47,11 +49,11 @@ public class StudyType   {
     return this;
   }
 
-   /**
-   * The human readable name of a study type
+  /**
+   * DEPRECATED in v1.3 - Use \"studyTypeName\"
    * @return name
   **/
-  @ApiModelProperty(value = "The human readable name of a study type")
+  @ApiModelProperty(value = "DEPRECATED in v1.3 - Use \"studyTypeName\"")
 
 
   public String getName() {
@@ -60,6 +62,26 @@ public class StudyType   {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public StudyType studyTypeName(String studyTypeName) {
+    this.studyTypeName = studyTypeName;
+    return this;
+  }
+
+  /**
+   * The human readable name of a study type
+   * @return studyTypeName
+  **/
+  @ApiModelProperty(value = "The human readable name of a study type")
+
+
+  public String getStudyTypeName() {
+    return studyTypeName;
+  }
+
+  public void setStudyTypeName(String studyTypeName) {
+    this.studyTypeName = studyTypeName;
   }
 
 
@@ -73,12 +95,13 @@ public class StudyType   {
     }
     StudyType studyType = (StudyType) o;
     return Objects.equals(this.description, studyType.description) &&
-        Objects.equals(this.name, studyType.name);
+        Objects.equals(this.name, studyType.name) &&
+        Objects.equals(this.studyTypeName, studyType.studyTypeName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(description, name);
+    return Objects.hash(description, name, studyTypeName);
   }
 
   @Override
@@ -88,6 +111,7 @@ public class StudyType   {
     
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    studyTypeName: ").append(toIndentedString(studyTypeName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -15,7 +15,6 @@ import javax.validation.constraints.*;
  * TrialResponse
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class TrialResponse   {
   @JsonProperty("metadata")
@@ -29,7 +28,7 @@ public class TrialResponse   {
     return this;
   }
 
-   /**
+  /**
    * Get metadata
    * @return metadata
   **/
@@ -50,7 +49,7 @@ public class TrialResponse   {
     return this;
   }
 
-   /**
+  /**
    * Get result
    * @return result
   **/

@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.model.BreedingMethodResponseResult;
+import io.swagger.model.BreedingMethod;
 import io.swagger.model.Metadata;
 import org.springframework.validation.annotation.Validated;
 import javax.validation.Valid;
@@ -15,21 +15,20 @@ import javax.validation.constraints.*;
  * BreedingMethodResponse
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class BreedingMethodResponse   {
   @JsonProperty("metadata")
   private Metadata metadata = null;
 
   @JsonProperty("result")
-  private BreedingMethodResponseResult result = null;
+  private BreedingMethod result = null;
 
   public BreedingMethodResponse metadata(Metadata metadata) {
     this.metadata = metadata;
     return this;
   }
 
-   /**
+  /**
    * Get metadata
    * @return metadata
   **/
@@ -45,12 +44,12 @@ public class BreedingMethodResponse   {
     this.metadata = metadata;
   }
 
-  public BreedingMethodResponse result(BreedingMethodResponseResult result) {
+  public BreedingMethodResponse result(BreedingMethod result) {
     this.result = result;
     return this;
   }
 
-   /**
+  /**
    * Get result
    * @return result
   **/
@@ -58,11 +57,11 @@ public class BreedingMethodResponse   {
 
   @Valid
 
-  public BreedingMethodResponseResult getResult() {
+  public BreedingMethod getResult() {
     return result;
   }
 
-  public void setResult(BreedingMethodResponseResult result) {
+  public void setResult(BreedingMethod result) {
     this.result = result;
   }
 

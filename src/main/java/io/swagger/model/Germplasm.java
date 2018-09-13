@@ -18,7 +18,6 @@ import javax.validation.constraints.*;
  * Germplasm
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class Germplasm   {
   @JsonProperty("accessionNumber")
@@ -99,7 +98,7 @@ public class Germplasm   {
     return this;
   }
 
-   /**
+  /**
    * This is the unique identifier for accessions within a genebank, and is assigned when a sample is entered into the genebank collection
    * @return accessionNumber
   **/
@@ -119,7 +118,7 @@ public class Germplasm   {
     return this;
   }
 
-   /**
+  /**
    * The date this germplasm was aquired by the genebank (MCPD)
    * @return acquisitionDate
   **/
@@ -140,7 +139,7 @@ public class Germplasm   {
     return this;
   }
 
-   /**
+  /**
    * The 3 digit code representing the biological status of the accession (MCPD)
    * @return biologicalStatusOfAccessionCode
   **/
@@ -160,7 +159,7 @@ public class Germplasm   {
     return this;
   }
 
-   /**
+  /**
    * The unique identifier for the breeding method used to create this germplasm
    * @return breedingMethodDbId
   **/
@@ -180,7 +179,7 @@ public class Germplasm   {
     return this;
   }
 
-   /**
+  /**
    * Common name for the crop (MCPD)
    * @return commonCropName
   **/
@@ -200,7 +199,7 @@ public class Germplasm   {
     return this;
   }
 
-   /**
+  /**
    * 3-letter ISO 3166-1 code of the country in which the sample was originally collected (MCPD)
    * @return countryOfOriginCode
   **/
@@ -220,7 +219,7 @@ public class Germplasm   {
     return this;
   }
 
-   /**
+  /**
    * Human readable name used for display purposes
    * @return defaultDisplayName
   **/
@@ -248,7 +247,7 @@ public class Germplasm   {
     return this;
   }
 
-   /**
+  /**
    * List of donor institutes (MCPD)
    * @return donors
   **/
@@ -269,7 +268,7 @@ public class Germplasm   {
     return this;
   }
 
-   /**
+  /**
    * Genus name for taxon. Initial uppercase letter required. (MCPD)
    * @return genus
   **/
@@ -289,7 +288,7 @@ public class Germplasm   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies a germplasm within the given database server
    * @return germplasmDbId
   **/
@@ -309,7 +308,7 @@ public class Germplasm   {
     return this;
   }
 
-   /**
+  /**
    * Name of the germplasm. It can be the prefered name and does not have to be unique.
    * @return germplasmName
   **/
@@ -329,7 +328,7 @@ public class Germplasm   {
     return this;
   }
 
-   /**
+  /**
    * The Permanent Unique Identifier which represents a germplasm
    * @return germplasmPUI
   **/
@@ -349,7 +348,7 @@ public class Germplasm   {
     return this;
   }
 
-   /**
+  /**
    * The code for the Institute that has bred the material. (MCPD)
    * @return instituteCode
   **/
@@ -369,7 +368,7 @@ public class Germplasm   {
     return this;
   }
 
-   /**
+  /**
    * The name of the institution which bred the material (MCPD)
    * @return instituteName
   **/
@@ -389,7 +388,7 @@ public class Germplasm   {
     return this;
   }
 
-   /**
+  /**
    * The cross name and optional selection history.
    * @return pedigree
   **/
@@ -409,7 +408,7 @@ public class Germplasm   {
     return this;
   }
 
-   /**
+  /**
    * The source of the seed 
    * @return seedSource
   **/
@@ -429,7 +428,7 @@ public class Germplasm   {
     return this;
   }
 
-   /**
+  /**
    * Specific epithet portion of the scientific name in lowercase letters. (MCPD)
    * @return species
   **/
@@ -449,7 +448,7 @@ public class Germplasm   {
     return this;
   }
 
-   /**
+  /**
    * The authority organization responsible for tracking and maintaining the species name (MCPD)
    * @return speciesAuthority
   **/
@@ -469,7 +468,7 @@ public class Germplasm   {
     return this;
   }
 
-   /**
+  /**
    * Subtaxon can be used to store any additional taxonomic identifier. (MCPD)
    * @return subtaxa
   **/
@@ -489,7 +488,7 @@ public class Germplasm   {
     return this;
   }
 
-   /**
+  /**
    *  The authority organization responsible for tracking and maintaining the subtaxon information (MCPD)
    * @return subtaxaAuthority
   **/
@@ -517,7 +516,7 @@ public class Germplasm   {
     return this;
   }
 
-   /**
+  /**
    * List of alternative names or IDs used to reference this germplasm
    * @return synonyms
   **/
@@ -545,7 +544,7 @@ public class Germplasm   {
     return this;
   }
 
-   /**
+  /**
    * The list of IDs for this SPECIES from different sources. If present, NCBI Taxon should be always listed as \"ncbiTaxon\" preferably with a purl. The rank of this ID should be species.
    * @return taxonIds
   **/
@@ -574,7 +573,7 @@ public class Germplasm   {
     return this;
   }
 
-   /**
+  /**
    * The 2 digit code representing the type of storage this germplasm is kept in at a genebank. (MCPD)
    * @return typeOfGermplasmStorageCode
   **/

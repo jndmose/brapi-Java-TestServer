@@ -17,7 +17,6 @@ import javax.validation.constraints.*;
  * VendorPlateFile
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class VendorPlateFile   {
   @JsonProperty("URL")
@@ -45,7 +44,7 @@ public class VendorPlateFile   {
     return this;
   }
 
-   /**
+  /**
    * The URL to a file with the results of a vendor analysis
    * @return URL
   **/
@@ -74,7 +73,7 @@ public class VendorPlateFile   {
     return this;
   }
 
-   /**
+  /**
    * Additional arbitrary info
    * @return additionalInfo
   **/
@@ -94,7 +93,7 @@ public class VendorPlateFile   {
     return this;
   }
 
-   /**
+  /**
    * Format of the file
    * @return fileType
   **/
@@ -115,7 +114,7 @@ public class VendorPlateFile   {
     return this;
   }
 
-   /**
+  /**
    * Name of the file
    * @return filename
   **/
@@ -136,7 +135,7 @@ public class VendorPlateFile   {
     return this;
   }
 
-   /**
+  /**
    * MD5 Hash Check Sum for the file to confirm download without error
    * @return md5sum
   **/
@@ -161,7 +160,7 @@ public class VendorPlateFile   {
     return this;
   }
 
-   /**
+  /**
    * The list of sampleDbIds included in the file
    * @return sampleDbIds
   **/

@@ -16,7 +16,6 @@ import javax.validation.constraints.*;
  * StudyLayoutRequest
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class StudyLayoutRequest   {
   @JsonProperty("layout")
@@ -36,7 +35,7 @@ public class StudyLayoutRequest   {
     return this;
   }
 
-   /**
+  /**
    * List of observation unit position data entities which need to be updated
    * @return layout
   **/

@@ -15,7 +15,6 @@ import javax.validation.constraints.*;
  * CommonCropNamesResponseResult
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class CommonCropNamesResponseResult   {
   @JsonProperty("data")
@@ -35,7 +34,7 @@ public class CommonCropNamesResponseResult   {
     return this;
   }
 
-   /**
+  /**
    * array of crop names availible on the server
    * @return data
   **/

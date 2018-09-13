@@ -13,7 +13,6 @@ import javax.validation.constraints.*;
  * MarkerSummaryMap
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class MarkerSummaryMap   {
   @JsonProperty("linkageGroupName")
@@ -33,7 +32,7 @@ public class MarkerSummaryMap   {
     return this;
   }
 
-   /**
+  /**
    * The Uniquely Identifiable name of this linkage group
    * @return linkageGroupName
   **/
@@ -53,7 +52,7 @@ public class MarkerSummaryMap   {
     return this;
   }
 
-   /**
+  /**
    * The position of a marker within a linkage group
    * @return location
   **/
@@ -73,7 +72,7 @@ public class MarkerSummaryMap   {
     return this;
   }
 
-   /**
+  /**
    * Internal db identifier
    * @return markerDbId
   **/
@@ -93,7 +92,7 @@ public class MarkerSummaryMap   {
     return this;
   }
 
-   /**
+  /**
    * The human readable name for a marker
    * @return markerName
   **/

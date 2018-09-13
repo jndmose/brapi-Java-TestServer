@@ -16,7 +16,6 @@ import javax.validation.constraints.*;
  * OntologiesResponseResult
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class OntologiesResponseResult   {
   @JsonProperty("data")
@@ -36,7 +35,7 @@ public class OntologiesResponseResult   {
     return this;
   }
 
-   /**
+  /**
    * Get data
    * @return data
   **/

@@ -14,7 +14,6 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "License and citation information for the data in this trial")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class TrialDatasetAuthorship   {
   @JsonProperty("datasetPUI")
@@ -28,7 +27,7 @@ public class TrialDatasetAuthorship   {
     return this;
   }
 
-   /**
+  /**
    * Get datasetPUI
    * @return datasetPUI
   **/
@@ -48,7 +47,7 @@ public class TrialDatasetAuthorship   {
     return this;
   }
 
-   /**
+  /**
    * Get license
    * @return license
   **/

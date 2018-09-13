@@ -47,6 +47,7 @@ import io.swagger.model.ObservationUnitStudy;
 import io.swagger.model.ObservationUnitXref;
 import io.swagger.model.ObservationVariable;
 import io.swagger.model.ObservationsTable;
+import io.swagger.model.ObservationsTable.HeaderRowEnum;
 import io.swagger.model.ObservationUnitPosition.EntryTypeEnum;
 import io.swagger.model.Season;
 import io.swagger.model.Study;
@@ -476,11 +477,25 @@ public class StudyService {
 		return tableWrapper;
 	}
 
-	private List<String> buildHeaderRow() {
-		String[] headerRow = { "year", "studyDbId", "studyName", "locationDbId", "locationName", "germplasmDbId",
-				"germplasmName", "observationUnitDbId", "plotNumber", "replicate", "blockNumber",
-				"observationTimestamp", "entryType", "X", "Y" };
-		return Arrays.asList(headerRow);
+	private List<HeaderRowEnum> buildHeaderRow() {
+		List<HeaderRowEnum> headerRow = new ArrayList<>();
+		headerRow.add(HeaderRowEnum.YEAR);
+		headerRow.add(HeaderRowEnum.STUDYDBID);
+		headerRow.add(HeaderRowEnum.STUDYNAME);
+		headerRow.add(HeaderRowEnum.LOCATIONDBID);
+		headerRow.add(HeaderRowEnum.LOCATIONNAME);
+		headerRow.add(HeaderRowEnum.GERMPLASMDBID);
+		headerRow.add(HeaderRowEnum.GERMPLASMNAME);
+		headerRow.add(HeaderRowEnum.OBSERVATIONUNITDBID);
+		headerRow.add(HeaderRowEnum.PLOTNUMBER);
+		headerRow.add(HeaderRowEnum.REPLICATE);
+		headerRow.add(HeaderRowEnum.BLOCKNUMBER);
+		headerRow.add(HeaderRowEnum.OBSERVATIONTIMESTAMP);
+		headerRow.add(HeaderRowEnum.ENTRYTYPE);
+		headerRow.add(HeaderRowEnum.X);
+		headerRow.add(HeaderRowEnum.Y);
+		
+		return headerRow;
 	}
 
 	private List<List<String>> buildDataMatrix(List<ObservationUnitEntity> units, List<ObservationVariable> variables) {

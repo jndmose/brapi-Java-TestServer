@@ -22,6 +22,8 @@ import io.swagger.model.VendorPlateRequest;
 import io.swagger.model.VendorPlateResponse;
 import io.swagger.model.VendorPlateSearchRequest;
 import io.swagger.model.VendorPlatesResponse;
+import io.swagger.model.VendorPlatesResponse1;
+import io.swagger.model.VendorPlatesResponse1Result;
 import io.swagger.model.VendorPlatesResponseResult;
 import io.swagger.model.VendorSpecification;
 import io.swagger.model.VendorSpecificationResponse;
@@ -54,19 +56,19 @@ public class VendorSampleController extends BrAPIController implements VendorApi
 
 	@CrossOrigin
 	@Override
-	public ResponseEntity<VendorPlatesResponse> vendorPlatesSearchGet(@Valid String vendorProjectDbId,
+	public ResponseEntity<VendorPlatesResponse1> vendorPlatesSearchGet(@Valid String vendorProjectDbId,
 			@Valid String vendorPlateDbId, @Valid String clientPlateDbId, @Valid Boolean sampleInfo,
 			@Valid Integer pageSize, @Valid Integer page) throws BrAPIServerException {
 		Metadata metadata = generateMetaDataTemplate(page, pageSize);
 		List<VendorPlate> plates = vendorSampleService.searchPlates(vendorProjectDbId, vendorPlateDbId, clientPlateDbId,
 				sampleInfo, metadata);
 
-		VendorPlatesResponseResult result = new VendorPlatesResponseResult();
-		result.setPlates(plates);
-		VendorPlatesResponse response = new VendorPlatesResponse();
+		VendorPlatesResponse1Result result = new VendorPlatesResponse1Result();
+		result.setData(plates);
+		VendorPlatesResponse1 response = new VendorPlatesResponse1();
 		response.setMetadata(metadata);
 		response.setResult(result);
-		return new ResponseEntity<VendorPlatesResponse>(response, HttpStatus.OK);
+		return new ResponseEntity<VendorPlatesResponse1>(response, HttpStatus.OK);
 	}
 
 	@CrossOrigin

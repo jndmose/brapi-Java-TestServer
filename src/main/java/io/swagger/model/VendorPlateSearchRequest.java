@@ -15,7 +15,6 @@ import javax.validation.constraints.*;
  * VendorPlateSearchRequest
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class VendorPlateSearchRequest   {
   @JsonProperty("clientPlateDbIds")
@@ -52,7 +51,7 @@ public class VendorPlateSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * List of plate ids from the client database to filter search
    * @return clientPlateDbIds
   **/
@@ -72,7 +71,7 @@ public class VendorPlateSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * Which page of the \"data\" array to return. The page indexing starts at 0 (page=0 will return the first page). Default is 0.
    * @return page
   **/
@@ -92,7 +91,7 @@ public class VendorPlateSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * The maximum number of items to return per page of the \"data\" array. Default is 1000.
    * @return pageSize
   **/
@@ -112,7 +111,7 @@ public class VendorPlateSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * Include array of sample information or not in response
    * @return sampleInfo
   **/
@@ -140,7 +139,7 @@ public class VendorPlateSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * List of plate ids from the vendors database to filter search
    * @return vendorPlateDbIds
   **/
@@ -168,7 +167,7 @@ public class VendorPlateSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * List of project ids from the vendors database to filter search
    * @return vendorProjectDbIds
   **/

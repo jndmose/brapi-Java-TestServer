@@ -17,7 +17,6 @@ import javax.validation.constraints.*;
  * NewObservationsRequestDeprecatedData
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class NewObservationsRequestDeprecatedData   {
   @JsonProperty("observatioUnitDbId")
@@ -35,7 +34,7 @@ public class NewObservationsRequestDeprecatedData   {
     return this;
   }
 
-   /**
+  /**
    * Get observatioUnitDbId
    * @return observatioUnitDbId
   **/
@@ -63,7 +62,7 @@ public class NewObservationsRequestDeprecatedData   {
     return this;
   }
 
-   /**
+  /**
    * Get observations
    * @return observations
   **/
@@ -84,7 +83,7 @@ public class NewObservationsRequestDeprecatedData   {
     return this;
   }
 
-   /**
+  /**
    * Get studyDbId
    * @return studyDbId
   **/

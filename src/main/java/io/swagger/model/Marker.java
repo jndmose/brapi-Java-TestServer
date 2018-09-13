@@ -15,7 +15,6 @@ import javax.validation.constraints.*;
  * Marker
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class Marker   {
   @JsonProperty("analysisMethods")
@@ -52,7 +51,7 @@ public class Marker   {
     return this;
   }
 
-   /**
+  /**
    * List of the genotyping platforms used to interrogate the marker
    * @return analysisMethods
   **/
@@ -72,7 +71,7 @@ public class Marker   {
     return this;
   }
 
-   /**
+  /**
    * A string representing the marker that will be meaningful to the user
    * @return defaultDisplayName
   **/
@@ -92,7 +91,7 @@ public class Marker   {
     return this;
   }
 
-   /**
+  /**
    * Internal db identifier
    * @return markerDbId
   **/
@@ -120,7 +119,7 @@ public class Marker   {
     return this;
   }
 
-   /**
+  /**
    * List of the reference (as the first item) and alternatives (the remaining items)
    * @return refAlt
   **/
@@ -148,7 +147,7 @@ public class Marker   {
     return this;
   }
 
-   /**
+  /**
    * List of other names for this marker
    * @return synonyms
   **/
@@ -168,7 +167,7 @@ public class Marker   {
     return this;
   }
 
-   /**
+  /**
    * The type of marker, e.g. SNP
    * @return type
   **/

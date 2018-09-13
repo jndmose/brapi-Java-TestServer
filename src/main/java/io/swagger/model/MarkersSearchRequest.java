@@ -16,7 +16,6 @@ import javax.validation.constraints.*;
  * MarkersSearchRequest
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class MarkersSearchRequest   {
   @JsonProperty("includeSynonyms")
@@ -79,7 +78,7 @@ public class MarkersSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * Should an array of synonyms be included in the response
    * @return includeSynonyms
   **/
@@ -107,7 +106,7 @@ public class MarkersSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * List of IDs which uniquely identify markers 
    * @return markerDbIds
   **/
@@ -127,7 +126,7 @@ public class MarkersSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * How to perform string matching during search. 'exact' will search for exact, case sensitive matches only. 'case_insensitive' will search for exact matches, but case insensitive. 'wildcard' will allow the special characters '*' (star) and '%' (percent) to represent variable length arbitrary strings, and the special character '?' (question) to represent one arbitrary character.
    * @return matchMethod
   **/
@@ -147,7 +146,7 @@ public class MarkersSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * The search pattern for the marker name or synonym.
    * @return name
   **/
@@ -167,7 +166,7 @@ public class MarkersSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * Which page of the \"data\" array to return. The page indexing starts at 0 (page=0 will return the first page). Default is 0.
    * @return page
   **/
@@ -187,7 +186,7 @@ public class MarkersSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * The maximum number of items to return per page of the \"data\" array. Default is 1000.
    * @return pageSize
   **/
@@ -207,7 +206,7 @@ public class MarkersSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * The type of marker, e.g. SNP
    * @return type
   **/

@@ -14,7 +14,6 @@ import javax.validation.constraints.*;
  * ObservationSummaryPhenotype
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class ObservationSummaryPhenotype   {
   @JsonProperty("collector")
@@ -43,7 +42,7 @@ public class ObservationSummaryPhenotype   {
     return this;
   }
 
-   /**
+  /**
    * The name or identifier of the entity which collected the observation
    * @return collector
   **/
@@ -63,7 +62,7 @@ public class ObservationSummaryPhenotype   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies an observation
    * @return observationDbId
   **/
@@ -83,7 +82,7 @@ public class ObservationSummaryPhenotype   {
     return this;
   }
 
-   /**
+  /**
    * The date and time  when this observation was made 
    * @return observationTimeStamp
   **/
@@ -104,7 +103,7 @@ public class ObservationSummaryPhenotype   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies an observation variable
    * @return observationVariableDbId
   **/
@@ -124,7 +123,7 @@ public class ObservationSummaryPhenotype   {
     return this;
   }
 
-   /**
+  /**
    * A human readable name for an observation variable
    * @return observationVariableName
   **/
@@ -144,7 +143,7 @@ public class ObservationSummaryPhenotype   {
     return this;
   }
 
-   /**
+  /**
    * The season when the observation data was collected
    * @return season
   **/
@@ -164,7 +163,7 @@ public class ObservationSummaryPhenotype   {
     return this;
   }
 
-   /**
+  /**
    * The value of the data collected as an observation
    * @return value
   **/

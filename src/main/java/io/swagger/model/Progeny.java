@@ -16,7 +16,6 @@ import javax.validation.constraints.*;
  * Progeny
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class Progeny   {
   @JsonProperty("defaultDisplayName")
@@ -34,7 +33,7 @@ public class Progeny   {
     return this;
   }
 
-   /**
+  /**
    * A human readable name for a germplasm
    * @return defaultDisplayName
   **/
@@ -54,7 +53,7 @@ public class Progeny   {
     return this;
   }
 
-   /**
+  /**
    *  The ID which uniquely identifies a germplasm
    * @return germplasmDbId
   **/
@@ -82,7 +81,7 @@ public class Progeny   {
     return this;
   }
 
-   /**
+  /**
    * List of germplasm entities which are direct children of this germplasm
    * @return progeny
   **/

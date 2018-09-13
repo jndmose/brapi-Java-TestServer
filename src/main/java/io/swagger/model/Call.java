@@ -16,7 +16,6 @@ import javax.validation.constraints.*;
  * Call
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class Call   {
   @JsonProperty("call")
@@ -26,9 +25,44 @@ public class Call   {
   @Valid
   private List<String> datatypes = new ArrayList<String>();
 
+  /**
+   * Gets or Sets methods
+   */
+  public enum MethodsEnum {
+    GET("GET"),
+    
+    POST("POST"),
+    
+    PUT("PUT"),
+    
+    DELETE("DELETE");
+
+    private String value;
+
+    MethodsEnum(String value) {
+      this.value = value;
+    }
+
+    @Override
+    @JsonValue
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    @JsonCreator
+    public static MethodsEnum fromValue(String text) {
+      for (MethodsEnum b : MethodsEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+  }
+
   @JsonProperty("methods")
   @Valid
-  private List<String> methods = new ArrayList<String>();
+  private List<MethodsEnum> methods = new ArrayList<MethodsEnum>();
 
   /**
    * Gets or Sets versions
@@ -74,7 +108,7 @@ public class Call   {
     return this;
   }
 
-   /**
+  /**
    * The name of the available call as recorded in the documentation
    * @return call
   **/
@@ -100,7 +134,7 @@ public class Call   {
     return this;
   }
 
-   /**
+  /**
    * The possible data formats returned by the available call
    * @return datatypes
   **/
@@ -116,17 +150,17 @@ public class Call   {
     this.datatypes = datatypes;
   }
 
-  public Call methods(List<String> methods) {
+  public Call methods(List<MethodsEnum> methods) {
     this.methods = methods;
     return this;
   }
 
-  public Call addMethodsItem(String methodsItem) {
+  public Call addMethodsItem(MethodsEnum methodsItem) {
     this.methods.add(methodsItem);
     return this;
   }
 
-   /**
+  /**
    * The possible HTTP Methods to be used with the available call
    * @return methods
   **/
@@ -134,11 +168,11 @@ public class Call   {
   @NotNull
 
 
-  public List<String> getMethods() {
+  public List<MethodsEnum> getMethods() {
     return methods;
   }
 
-  public void setMethods(List<String> methods) {
+  public void setMethods(List<MethodsEnum> methods) {
     this.methods = methods;
   }
 
@@ -155,7 +189,7 @@ public class Call   {
     return this;
   }
 
-   /**
+  /**
    * The supported versions of a particular call
    * @return versions
   **/

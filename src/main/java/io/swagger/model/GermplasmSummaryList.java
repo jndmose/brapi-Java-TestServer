@@ -16,7 +16,6 @@ import javax.validation.constraints.*;
  * GermplasmSummaryList
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class GermplasmSummaryList   {
   @JsonProperty("data")
@@ -42,7 +41,7 @@ public class GermplasmSummaryList   {
     return this;
   }
 
-   /**
+  /**
    * List of germplasm associated with a given trial and study
    * @return data
   **/
@@ -63,11 +62,11 @@ public class GermplasmSummaryList   {
     return this;
   }
 
-   /**
-   * The ID which uniquely identifies a study within the given database server
+  /**
+   * ** Deprecated ** The request contains the studyDbId The ID which uniquely identifies a study within the given database server
    * @return studyDbId
   **/
-  @ApiModelProperty(value = "The ID which uniquely identifies a study within the given database server")
+  @ApiModelProperty(value = "** Deprecated ** The request contains the studyDbId The ID which uniquely identifies a study within the given database server")
 
 
   public String getStudyDbId() {
@@ -83,11 +82,11 @@ public class GermplasmSummaryList   {
     return this;
   }
 
-   /**
-   * The human readable name of a trial
+  /**
+   * ** Deprecated ** trialName not relevent  The human readable name of a trial
    * @return trialName
   **/
-  @ApiModelProperty(value = "The human readable name of a trial")
+  @ApiModelProperty(value = "** Deprecated ** trialName not relevent  The human readable name of a trial")
 
 
   public String getTrialName() {

@@ -16,7 +16,6 @@ import javax.validation.constraints.*;
  * StudySearchRequest
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class StudySearchRequest   {
   @JsonProperty("active")
@@ -162,7 +161,7 @@ public class StudySearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * Is this study currently active
    * @return active
   **/
@@ -190,7 +189,7 @@ public class StudySearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * List of IDs which uniquely identify germplasm
    * @return germplasmDbIds
   **/
@@ -218,7 +217,7 @@ public class StudySearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * List of location identifiers to filter search results
    * @return locationDbIds
   **/
@@ -246,7 +245,7 @@ public class StudySearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * List of observation variable IDs to search for
    * @return observationVariableDbIds
   **/
@@ -266,7 +265,7 @@ public class StudySearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * Which page of the \"data\" array to return. The page indexing starts at 0 (page=0 will return the first page). Default is 0.
    * @return page
   **/
@@ -286,7 +285,7 @@ public class StudySearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * The maximum number of items to return per page of the \"data\" array. Default is 1000.
    * @return pageSize
   **/
@@ -314,7 +313,7 @@ public class StudySearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * List of program identifiers to filter search results
    * @return programDbIds
   **/
@@ -342,7 +341,7 @@ public class StudySearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * List of program names to filter search results
    * @return programNames
   **/
@@ -370,7 +369,7 @@ public class StudySearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies a season
    * @return seasonDbId
   **/
@@ -390,7 +389,7 @@ public class StudySearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * Name of one of the fields within the study object on which results can be sorted
    * @return sortBy
   **/
@@ -410,7 +409,7 @@ public class StudySearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * Order results should be sorted. ex. \"ASC\" or \"DESC\"
    * @return sortOrder
   **/
@@ -438,7 +437,7 @@ public class StudySearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * List of study identifiers to search for
    * @return studyDbIds
   **/
@@ -466,7 +465,7 @@ public class StudySearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * List of location names to filter search results
    * @return studyLocations
   **/
@@ -494,7 +493,7 @@ public class StudySearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * List of study names to filter search results
    * @return studyNames
   **/
@@ -514,7 +513,7 @@ public class StudySearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * The type of study being performed. ex. \"Yeald Trial\", etc
    * @return studyType
   **/
@@ -542,7 +541,7 @@ public class StudySearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * List of trial identifiers to filter search results
    * @return trialDbIds
   **/

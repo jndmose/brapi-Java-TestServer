@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.model.AlleleMatrixDetails;
-import io.swagger.model.Metadata;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.validation.annotation.Validated;
@@ -14,43 +13,42 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
- * AlleleMatrixDetailsResponse
+ * AlleleMatrixDetailsResponseResult
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class AlleleMatrixDetailsResponseResult   {
   @JsonProperty("data")
   @Valid
   private List<AlleleMatrixDetails> data = null;
 
-  public AlleleMatrixDetailsResponseResult result(List<AlleleMatrixDetails> result) {
-    this.data = result;
+  public AlleleMatrixDetailsResponseResult data(List<AlleleMatrixDetails> data) {
+    this.data = data;
     return this;
   }
 
-  public AlleleMatrixDetailsResponseResult addResultItem(AlleleMatrixDetails resultItem) {
+  public AlleleMatrixDetailsResponseResult addDataItem(AlleleMatrixDetails dataItem) {
     if (this.data == null) {
       this.data = new ArrayList<AlleleMatrixDetails>();
     }
-    this.data.add(resultItem);
+    this.data.add(dataItem);
     return this;
   }
 
-   /**
-   * Get result
-   * @return result
+  /**
+   * Get data
+   * @return data
   **/
   @ApiModelProperty(value = "")
 
   @Valid
 
-  public List<AlleleMatrixDetails> getResult() {
+  public List<AlleleMatrixDetails> getData() {
     return data;
   }
 
-  public void setData(List<AlleleMatrixDetails> result) {
-    this.data = result;
+  public void setData(List<AlleleMatrixDetails> data) {
+    this.data = data;
   }
 
 
@@ -62,8 +60,8 @@ public class AlleleMatrixDetailsResponseResult   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AlleleMatrixDetailsResponseResult alleleMatrixDetailsResponse = (AlleleMatrixDetailsResponseResult) o;
-    return Objects.equals(this.data, alleleMatrixDetailsResponse.data);
+    AlleleMatrixDetailsResponseResult alleleMatrixDetailsResponseResult = (AlleleMatrixDetailsResponseResult) o;
+    return Objects.equals(this.data, alleleMatrixDetailsResponseResult.data);
   }
 
   @Override
@@ -74,9 +72,9 @@ public class AlleleMatrixDetailsResponseResult   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AlleleMatrixDetailsResponse {\n");
+    sb.append("class AlleleMatrixDetailsResponseResult {\n");
     
-    sb.append("    result: ").append(toIndentedString(data)).append("\n");
+    sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");
     return sb.toString();
   }

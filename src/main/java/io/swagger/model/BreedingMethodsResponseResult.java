@@ -13,22 +13,21 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
- * BreedingMethodResponseResult
+ * BreedingMethodsResponseResult
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
-public class BreedingMethodResponseResult   {
+public class BreedingMethodsResponseResult   {
   @JsonProperty("data")
   @Valid
   private List<BreedingMethod> data = null;
 
-  public BreedingMethodResponseResult data(List<BreedingMethod> data) {
+  public BreedingMethodsResponseResult data(List<BreedingMethod> data) {
     this.data = data;
     return this;
   }
 
-  public BreedingMethodResponseResult addDataItem(BreedingMethod dataItem) {
+  public BreedingMethodsResponseResult addDataItem(BreedingMethod dataItem) {
     if (this.data == null) {
       this.data = new ArrayList<BreedingMethod>();
     }
@@ -36,7 +35,7 @@ public class BreedingMethodResponseResult   {
     return this;
   }
 
-   /**
+  /**
    * Get data
    * @return data
   **/
@@ -61,8 +60,8 @@ public class BreedingMethodResponseResult   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    BreedingMethodResponseResult breedingMethodResponseResult = (BreedingMethodResponseResult) o;
-    return Objects.equals(this.data, breedingMethodResponseResult.data);
+    BreedingMethodsResponseResult breedingMethodsResponseResult = (BreedingMethodsResponseResult) o;
+    return Objects.equals(this.data, breedingMethodsResponseResult.data);
   }
 
   @Override
@@ -73,7 +72,7 @@ public class BreedingMethodResponseResult   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class BreedingMethodResponseResult {\n");
+    sb.append("class BreedingMethodsResponseResult {\n");
     
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");

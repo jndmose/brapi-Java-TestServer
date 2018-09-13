@@ -15,7 +15,6 @@ import javax.validation.constraints.*;
  * MarkersResponse2
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class MarkersResponse2   {
   @JsonProperty("metadata")
@@ -29,7 +28,7 @@ public class MarkersResponse2   {
     return this;
   }
 
-   /**
+  /**
    * Get metadata
    * @return metadata
   **/
@@ -50,7 +49,7 @@ public class MarkersResponse2   {
     return this;
   }
 
-   /**
+  /**
    * Get result
    * @return result
   **/

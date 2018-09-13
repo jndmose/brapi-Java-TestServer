@@ -14,7 +14,6 @@ import javax.validation.constraints.*;
  * Observation
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class Observation   {
   @JsonProperty("germplasmDbId")
@@ -29,7 +28,7 @@ public class Observation   {
   @JsonProperty("observationLevel")
   private String observationLevel = null;
 
-  @JsonProperty("observationTimestamp")
+  @JsonProperty("observationTimeStamp")
   private OffsetDateTime observationTimeStamp = null;
 
   @JsonProperty("observationUnitDbId")
@@ -61,7 +60,7 @@ public class Observation   {
     return this;
   }
 
-   /**
+  /**
    *  The ID which uniquely identifies a germplasm
    * @return germplasmDbId
   **/
@@ -81,7 +80,7 @@ public class Observation   {
     return this;
   }
 
-   /**
+  /**
    * Name of the germplasm. It can be the prefered name and does not have to be unique.
    * @return germplasmName
   **/
@@ -101,7 +100,7 @@ public class Observation   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies an observation
    * @return observationDbId
   **/
@@ -121,7 +120,7 @@ public class Observation   {
     return this;
   }
 
-   /**
+  /**
    * The level of an observation unit. ex. \"plot\", \"plant\"
    * @return observationLevel
   **/
@@ -141,7 +140,7 @@ public class Observation   {
     return this;
   }
 
-   /**
+  /**
    * The date and time  when this observation was made 
    * @return observationTimeStamp
   **/
@@ -162,7 +161,7 @@ public class Observation   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies an observation unit
    * @return observationUnitDbId
   **/
@@ -182,7 +181,7 @@ public class Observation   {
     return this;
   }
 
-   /**
+  /**
    * A human readable name for an observation unit
    * @return observationUnitName
   **/
@@ -202,7 +201,7 @@ public class Observation   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies an observation variable
    * @return observationVariableDbId
   **/
@@ -222,7 +221,7 @@ public class Observation   {
     return this;
   }
 
-   /**
+  /**
    * A human readable name for an observation variable
    * @return observationVariableName
   **/
@@ -242,7 +241,7 @@ public class Observation   {
     return this;
   }
 
-   /**
+  /**
    * The name or identifier of the entity which collected the observation
    * @return operator
   **/
@@ -262,7 +261,7 @@ public class Observation   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies a study within the given database server
    * @return studyDbId
   **/
@@ -282,7 +281,7 @@ public class Observation   {
     return this;
   }
 
-   /**
+  /**
    * The name or id of the user who uploaded the observation to the database system
    * @return uploadedBy
   **/
@@ -302,7 +301,7 @@ public class Observation   {
     return this;
   }
 
-   /**
+  /**
    * The value of the data collected as an observation
    * @return value
   **/

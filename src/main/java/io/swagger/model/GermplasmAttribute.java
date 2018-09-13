@@ -14,7 +14,6 @@ import javax.validation.constraints.*;
  * GermplasmAttribute
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class GermplasmAttribute   {
   @JsonProperty("attributeCode")
@@ -37,7 +36,7 @@ public class GermplasmAttribute   {
     return this;
   }
 
-   /**
+  /**
    * Short abbreviation which represents this attribute
    * @return attributeCode
   **/
@@ -57,7 +56,7 @@ public class GermplasmAttribute   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies this attribute within the given database server
    * @return attributeDbId
   **/
@@ -77,7 +76,7 @@ public class GermplasmAttribute   {
     return this;
   }
 
-   /**
+  /**
    * The human readable name of this attribute
    * @return attributeName
   **/
@@ -97,7 +96,7 @@ public class GermplasmAttribute   {
     return this;
   }
 
-   /**
+  /**
    * The date the value of this attribute was determined for a given germplasm
    * @return determinedDate
   **/
@@ -118,7 +117,7 @@ public class GermplasmAttribute   {
     return this;
   }
 
-   /**
+  /**
    * The value of this attribute for a given germplasm
    * @return value
   **/

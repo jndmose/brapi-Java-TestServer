@@ -5,31 +5,30 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.model.BreedingMethod;
+import io.swagger.model.BreedingMethodsResponseResult;
 import io.swagger.model.Metadata;
 import org.springframework.validation.annotation.Validated;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
- * BreedingMethodResponse1
+ * BreedingMethodsResponse
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
-public class BreedingMethodResponse1   {
+public class BreedingMethodsResponse   {
   @JsonProperty("metadata")
   private Metadata metadata = null;
 
   @JsonProperty("result")
-  private BreedingMethod result = null;
+  private BreedingMethodsResponseResult result = null;
 
-  public BreedingMethodResponse1 metadata(Metadata metadata) {
+  public BreedingMethodsResponse metadata(Metadata metadata) {
     this.metadata = metadata;
     return this;
   }
 
-   /**
+  /**
    * Get metadata
    * @return metadata
   **/
@@ -45,12 +44,12 @@ public class BreedingMethodResponse1   {
     this.metadata = metadata;
   }
 
-  public BreedingMethodResponse1 result(BreedingMethod result) {
+  public BreedingMethodsResponse result(BreedingMethodsResponseResult result) {
     this.result = result;
     return this;
   }
 
-   /**
+  /**
    * Get result
    * @return result
   **/
@@ -58,11 +57,11 @@ public class BreedingMethodResponse1   {
 
   @Valid
 
-  public BreedingMethod getResult() {
+  public BreedingMethodsResponseResult getResult() {
     return result;
   }
 
-  public void setResult(BreedingMethod result) {
+  public void setResult(BreedingMethodsResponseResult result) {
     this.result = result;
   }
 
@@ -75,9 +74,9 @@ public class BreedingMethodResponse1   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    BreedingMethodResponse1 breedingMethodResponse1 = (BreedingMethodResponse1) o;
-    return Objects.equals(this.metadata, breedingMethodResponse1.metadata) &&
-        Objects.equals(this.result, breedingMethodResponse1.result);
+    BreedingMethodsResponse breedingMethodsResponse = (BreedingMethodsResponse) o;
+    return Objects.equals(this.metadata, breedingMethodsResponse.metadata) &&
+        Objects.equals(this.result, breedingMethodsResponse.result);
   }
 
   @Override
@@ -88,7 +87,7 @@ public class BreedingMethodResponse1   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class BreedingMethodResponse1 {\n");
+    sb.append("class BreedingMethodsResponse {\n");
     
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
     sb.append("    result: ").append(toIndentedString(result)).append("\n");

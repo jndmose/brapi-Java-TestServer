@@ -14,7 +14,6 @@ import javax.validation.constraints.*;
  * AlleleMatrixDetails
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class AlleleMatrixDetails   {
   @JsonProperty("description")
@@ -25,6 +24,9 @@ public class AlleleMatrixDetails   {
 
   @JsonProperty("matrixDbId")
   private String matrixDbId = null;
+
+  @JsonProperty("matrixName")
+  private String matrixName = null;
 
   @JsonProperty("name")
   private String name = null;
@@ -37,7 +39,7 @@ public class AlleleMatrixDetails   {
     return this;
   }
 
-   /**
+  /**
    * How the matrix was generated
    * @return description
   **/
@@ -57,7 +59,7 @@ public class AlleleMatrixDetails   {
     return this;
   }
 
-   /**
+  /**
    * A date format
    * @return lastUpdated
   **/
@@ -78,7 +80,7 @@ public class AlleleMatrixDetails   {
     return this;
   }
 
-   /**
+  /**
    * ID of the matrix
    * @return matrixDbId
   **/
@@ -93,16 +95,36 @@ public class AlleleMatrixDetails   {
     this.matrixDbId = matrixDbId;
   }
 
+  public AlleleMatrixDetails matrixName(String matrixName) {
+    this.matrixName = matrixName;
+    return this;
+  }
+
+  /**
+   * Name of the matrix
+   * @return matrixName
+  **/
+  @ApiModelProperty(value = "Name of the matrix")
+
+
+  public String getMatrixName() {
+    return matrixName;
+  }
+
+  public void setMatrixName(String matrixName) {
+    this.matrixName = matrixName;
+  }
+
   public AlleleMatrixDetails name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * Name of the matrix
+  /**
+   * DEPRECATED in v1.3 - Use \"matrixName\"
    * @return name
   **/
-  @ApiModelProperty(value = "Name of the matrix")
+  @ApiModelProperty(value = "DEPRECATED in v1.3 - Use \"matrixName\"")
 
 
   public String getName() {
@@ -118,7 +140,7 @@ public class AlleleMatrixDetails   {
     return this;
   }
 
-   /**
+  /**
    * Link to the study where the matrix was produced
    * @return studyDbId
   **/
@@ -146,13 +168,14 @@ public class AlleleMatrixDetails   {
     return Objects.equals(this.description, alleleMatrixDetails.description) &&
         Objects.equals(this.lastUpdated, alleleMatrixDetails.lastUpdated) &&
         Objects.equals(this.matrixDbId, alleleMatrixDetails.matrixDbId) &&
+        Objects.equals(this.matrixName, alleleMatrixDetails.matrixName) &&
         Objects.equals(this.name, alleleMatrixDetails.name) &&
         Objects.equals(this.studyDbId, alleleMatrixDetails.studyDbId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(description, lastUpdated, matrixDbId, name, studyDbId);
+    return Objects.hash(description, lastUpdated, matrixDbId, matrixName, name, studyDbId);
   }
 
   @Override
@@ -163,6 +186,7 @@ public class AlleleMatrixDetails   {
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    lastUpdated: ").append(toIndentedString(lastUpdated)).append("\n");
     sb.append("    matrixDbId: ").append(toIndentedString(matrixDbId)).append("\n");
+    sb.append("    matrixName: ").append(toIndentedString(matrixName)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    studyDbId: ").append(toIndentedString(studyDbId)).append("\n");
     sb.append("}");

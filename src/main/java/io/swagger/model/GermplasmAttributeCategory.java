@@ -13,11 +13,13 @@ import javax.validation.constraints.*;
  * GermplasmAttributeCategory
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class GermplasmAttributeCategory   {
   @JsonProperty("attributeCategoryDbId")
   private String attributeCategoryDbId = null;
+
+  @JsonProperty("attributeCategoryName")
+  private String attributeCategoryName = null;
 
   @JsonProperty("name")
   private String name = null;
@@ -27,7 +29,7 @@ public class GermplasmAttributeCategory   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies this attribute category within the given database server
    * @return attributeCategoryDbId
   **/
@@ -42,16 +44,36 @@ public class GermplasmAttributeCategory   {
     this.attributeCategoryDbId = attributeCategoryDbId;
   }
 
+  public GermplasmAttributeCategory attributeCategoryName(String attributeCategoryName) {
+    this.attributeCategoryName = attributeCategoryName;
+    return this;
+  }
+
+  /**
+   * A human readable name for this attribute category
+   * @return attributeCategoryName
+  **/
+  @ApiModelProperty(value = "A human readable name for this attribute category")
+
+
+  public String getAttributeCategoryName() {
+    return attributeCategoryName;
+  }
+
+  public void setAttributeCategoryName(String attributeCategoryName) {
+    this.attributeCategoryName = attributeCategoryName;
+  }
+
   public GermplasmAttributeCategory name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * A human readable name for this attribute category
+  /**
+   * DEPRECATED in v1.3 - Use \"attributeCategoryName\"
    * @return name
   **/
-  @ApiModelProperty(value = "A human readable name for this attribute category")
+  @ApiModelProperty(value = "DEPRECATED in v1.3 - Use \"attributeCategoryName\"")
 
 
   public String getName() {
@@ -73,12 +95,13 @@ public class GermplasmAttributeCategory   {
     }
     GermplasmAttributeCategory germplasmAttributeCategory = (GermplasmAttributeCategory) o;
     return Objects.equals(this.attributeCategoryDbId, germplasmAttributeCategory.attributeCategoryDbId) &&
+        Objects.equals(this.attributeCategoryName, germplasmAttributeCategory.attributeCategoryName) &&
         Objects.equals(this.name, germplasmAttributeCategory.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(attributeCategoryDbId, name);
+    return Objects.hash(attributeCategoryDbId, attributeCategoryName, name);
   }
 
   @Override
@@ -87,6 +110,7 @@ public class GermplasmAttributeCategory   {
     sb.append("class GermplasmAttributeCategory {\n");
     
     sb.append("    attributeCategoryDbId: ").append(toIndentedString(attributeCategoryDbId)).append("\n");
+    sb.append("    attributeCategoryName: ").append(toIndentedString(attributeCategoryName)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();

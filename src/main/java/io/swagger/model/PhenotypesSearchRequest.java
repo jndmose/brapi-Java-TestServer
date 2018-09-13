@@ -16,7 +16,6 @@ import javax.validation.constraints.*;
  * PhenotypesSearchRequest
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class PhenotypesSearchRequest   {
   @JsonProperty("germplasmDbIds")
@@ -75,7 +74,7 @@ public class PhenotypesSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * The name or synonym of external genebank accession identifiers
    * @return germplasmDbIds
   **/
@@ -103,7 +102,7 @@ public class PhenotypesSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * locations these traits were collected
    * @return locationDbIds
   **/
@@ -123,7 +122,7 @@ public class PhenotypesSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * The type of the observationUnit. Returns only the observation unit of the specified type; the parent levels ID can be accessed through observationUnit Structure.
    * @return observationLevel
   **/
@@ -143,7 +142,7 @@ public class PhenotypesSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * Timestamp range end
    * @return observationTimeStampRangeEnd
   **/
@@ -164,7 +163,7 @@ public class PhenotypesSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * Timestamp range start
    * @return observationTimeStampRangeStart
   **/
@@ -193,7 +192,7 @@ public class PhenotypesSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * The IDs of traits, could be ontology ID, database ID or PUI
    * @return observationVariableDbIds
   **/
@@ -213,7 +212,7 @@ public class PhenotypesSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * Which page of the \"data\" array to return. The page indexing starts at 0 (page=0 will return the first page). Default is 0.
    * @return page
   **/
@@ -233,7 +232,7 @@ public class PhenotypesSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * The maximum number of items to return per page of the \"data\" array. Default is 1000.
    * @return pageSize
   **/
@@ -261,7 +260,7 @@ public class PhenotypesSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * list of programs to search across
    * @return programDbIds
   **/
@@ -289,7 +288,7 @@ public class PhenotypesSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * The year or Phenotyping campaign of a multi-annual study (trees, grape, ...)
    * @return seasonDbIds
   **/
@@ -317,7 +316,7 @@ public class PhenotypesSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * The database ID / PK of the studies search parameter
    * @return studyDbIds
   **/
@@ -345,7 +344,7 @@ public class PhenotypesSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * list of trials to search across
    * @return trialDbIds
   **/

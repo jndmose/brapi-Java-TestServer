@@ -13,7 +13,6 @@ import javax.validation.constraints.*;
  * LinkageGroup
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class LinkageGroup   {
   @JsonProperty("linkageGroupName")
@@ -30,7 +29,7 @@ public class LinkageGroup   {
     return this;
   }
 
-   /**
+  /**
    * The Uniquely Identifiable name of this linkage group
    * @return linkageGroupName
   **/
@@ -50,7 +49,7 @@ public class LinkageGroup   {
     return this;
   }
 
-   /**
+  /**
    * The number of markers associated with this linkage group
    * @return markerCount
   **/
@@ -70,7 +69,7 @@ public class LinkageGroup   {
     return this;
   }
 
-   /**
+  /**
    * The maximum position of a marker within this linkage group
    * @return maxPosition
   **/

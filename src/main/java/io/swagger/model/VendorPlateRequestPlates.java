@@ -16,7 +16,6 @@ import javax.validation.constraints.*;
  * VendorPlateRequestPlates
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class VendorPlateRequestPlates   {
   @JsonProperty("clientPlateDbId")
@@ -40,7 +39,7 @@ public class VendorPlateRequestPlates   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies this plate in the clients database
    * @return clientPlateDbId
   **/
@@ -60,7 +59,7 @@ public class VendorPlateRequestPlates   {
     return this;
   }
 
-   /**
+  /**
    * Defines the plate layout format, usually \"Plate_96\" for a 96 well plate or \"Tubes\" for plateless format
    * @return plateFormat
   **/
@@ -80,7 +79,7 @@ public class VendorPlateRequestPlates   {
     return this;
   }
 
-   /**
+  /**
    * Get sampleType
    * @return sampleType
   **/
@@ -108,7 +107,7 @@ public class VendorPlateRequestPlates   {
     return this;
   }
 
-   /**
+  /**
    * Get samples
    * @return samples
   **/
@@ -129,7 +128,7 @@ public class VendorPlateRequestPlates   {
     return this;
   }
 
-   /**
+  /**
    * Get vendorProjectDbId
    * @return vendorProjectDbId
   **/

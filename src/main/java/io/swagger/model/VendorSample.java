@@ -14,7 +14,6 @@ import javax.validation.constraints.*;
  * VendorSample
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class VendorSample   {
   @JsonProperty("column")
@@ -46,7 +45,7 @@ public class VendorSample   {
     return this;
   }
 
-   /**
+  /**
    * The sample column index number in a plate
    * @return column
   **/
@@ -66,7 +65,7 @@ public class VendorSample   {
     return this;
   }
 
-   /**
+  /**
    * The concentration of a sample in solution
    * @return concentration
   **/
@@ -86,7 +85,7 @@ public class VendorSample   {
     return this;
   }
 
-   /**
+  /**
    * the sample row index number in a plate
    * @return row
   **/
@@ -106,7 +105,7 @@ public class VendorSample   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies a sample
    * @return sampleDbId
   **/
@@ -126,7 +125,7 @@ public class VendorSample   {
     return this;
   }
 
-   /**
+  /**
    * The identifier (name, ID, URI) of a particular taxonomy within the source provider
    * @return taxonId
   **/
@@ -147,7 +146,7 @@ public class VendorSample   {
     return this;
   }
 
-   /**
+  /**
    * The type of tissue sampled. ex. 'Leaf', 'Root', etc.
    * @return tissueType
   **/
@@ -167,7 +166,7 @@ public class VendorSample   {
     return this;
   }
 
-   /**
+  /**
    * The physical volume of a sample
    * @return volume
   **/
@@ -187,7 +186,7 @@ public class VendorSample   {
     return this;
   }
 
-   /**
+  /**
    * The plate well number where a sample is located
    * @return well
   **/

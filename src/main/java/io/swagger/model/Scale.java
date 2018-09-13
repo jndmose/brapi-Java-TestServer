@@ -3,6 +3,7 @@ package io.swagger.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.model.ValidValues;
@@ -15,11 +16,53 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "Scale metadata")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class Scale   {
+  /**
+   * Class of the scale, entries can be \"Numerical\", \"Nominal\", \"Ordinal\", \"Text\", \"Code\", \"Time\", \"Duration\"
+   */
+  public enum DataTypeEnum {
+    NUMERICAL("Numerical"),
+    
+    NOMINAL("Nominal"),
+    
+    ORDINAL("Ordinal"),
+    
+    TEXT("Text"),
+    
+    CODE("Code"),
+    
+    TIME("Time"),
+    
+    DURATION("Duration"),
+    
+    CATEGORICAL("Categorical");
+
+    private String value;
+
+    DataTypeEnum(String value) {
+      this.value = value;
+    }
+
+    @Override
+    @JsonValue
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    @JsonCreator
+    public static DataTypeEnum fromValue(String text) {
+      for (DataTypeEnum b : DataTypeEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+  }
+
   @JsonProperty("dataType")
-  private String dataType = null;
+  private DataTypeEnum dataType = null;
 
   @JsonProperty("decimalPlaces")
   private Integer decimalPlaces = null;
@@ -30,29 +73,32 @@ public class Scale   {
   @JsonProperty("scaleDbId")
   private String scaleDbId = null;
 
+  @JsonProperty("scaleName")
+  private String scaleName = null;
+
   @JsonProperty("validValues")
   private ValidValues validValues = null;
 
   @JsonProperty("xref")
   private String xref = null;
 
-  public Scale dataType(String dataType) {
+  public Scale dataType(DataTypeEnum dataType) {
     this.dataType = dataType;
     return this;
   }
 
-   /**
+  /**
    * Class of the scale, entries can be \"Numerical\", \"Nominal\", \"Ordinal\", \"Text\", \"Code\", \"Time\", \"Duration\"
    * @return dataType
   **/
   @ApiModelProperty(value = "Class of the scale, entries can be \"Numerical\", \"Nominal\", \"Ordinal\", \"Text\", \"Code\", \"Time\", \"Duration\"")
 
 
-  public String getDataType() {
+  public DataTypeEnum getDataType() {
     return dataType;
   }
 
-  public void setDataType(String dataType) {
+  public void setDataType(DataTypeEnum dataType) {
     this.dataType = dataType;
   }
 
@@ -61,7 +107,7 @@ public class Scale   {
     return this;
   }
 
-   /**
+  /**
    * For numerical, number of decimal places to be reported
    * @return decimalPlaces
   **/
@@ -81,11 +127,11 @@ public class Scale   {
     return this;
   }
 
-   /**
-   * Name of the scale
+  /**
+   * DEPRECATED in v1.3 - Use \"scaleName\"
    * @return name
   **/
-  @ApiModelProperty(value = "Name of the scale")
+  @ApiModelProperty(value = "DEPRECATED in v1.3 - Use \"scaleName\"")
 
 
   public String getName() {
@@ -101,7 +147,7 @@ public class Scale   {
     return this;
   }
 
-   /**
+  /**
    * Unique identifier of the scale. If left blank, the upload system will automatically generate a scale ID.
    * @return scaleDbId
   **/
@@ -116,12 +162,32 @@ public class Scale   {
     this.scaleDbId = scaleDbId;
   }
 
+  public Scale scaleName(String scaleName) {
+    this.scaleName = scaleName;
+    return this;
+  }
+
+  /**
+   * Name of the scale
+   * @return scaleName
+  **/
+  @ApiModelProperty(value = "Name of the scale")
+
+
+  public String getScaleName() {
+    return scaleName;
+  }
+
+  public void setScaleName(String scaleName) {
+    this.scaleName = scaleName;
+  }
+
   public Scale validValues(ValidValues validValues) {
     this.validValues = validValues;
     return this;
   }
 
-   /**
+  /**
    * List of valid values expected for non-numeric data
    * @return validValues
   **/
@@ -142,7 +208,7 @@ public class Scale   {
     return this;
   }
 
-   /**
+  /**
    * Cross reference to the scale, for example to a unit ontology such as UO or to a unit of an external major database
    * @return xref
   **/
@@ -171,13 +237,14 @@ public class Scale   {
         Objects.equals(this.decimalPlaces, scale.decimalPlaces) &&
         Objects.equals(this.name, scale.name) &&
         Objects.equals(this.scaleDbId, scale.scaleDbId) &&
+        Objects.equals(this.scaleName, scale.scaleName) &&
         Objects.equals(this.validValues, scale.validValues) &&
         Objects.equals(this.xref, scale.xref);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(dataType, decimalPlaces, name, scaleDbId, validValues, xref);
+    return Objects.hash(dataType, decimalPlaces, name, scaleDbId, scaleName, validValues, xref);
   }
 
   @Override
@@ -189,6 +256,7 @@ public class Scale   {
     sb.append("    decimalPlaces: ").append(toIndentedString(decimalPlaces)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    scaleDbId: ").append(toIndentedString(scaleDbId)).append("\n");
+    sb.append("    scaleName: ").append(toIndentedString(scaleName)).append("\n");
     sb.append("    validValues: ").append(toIndentedString(validValues)).append("\n");
     sb.append("    xref: ").append(toIndentedString(xref)).append("\n");
     sb.append("}");

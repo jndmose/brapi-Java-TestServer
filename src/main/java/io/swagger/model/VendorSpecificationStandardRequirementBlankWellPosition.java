@@ -16,7 +16,6 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "Position data for reference blank well")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class VendorSpecificationStandardRequirementBlankWellPosition   {
   @JsonProperty("numberOfBlanksPerPlate")
@@ -31,7 +30,7 @@ public class VendorSpecificationStandardRequirementBlankWellPosition   {
     return this;
   }
 
-   /**
+  /**
    * Get numberOfBlanksPerPlate
    * @return numberOfBlanksPerPlate
   **/
@@ -59,7 +58,7 @@ public class VendorSpecificationStandardRequirementBlankWellPosition   {
     return this;
   }
 
-   /**
+  /**
    * Get positions
    * @return positions
   **/

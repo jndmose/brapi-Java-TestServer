@@ -14,7 +14,6 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "The pagination object is applicable only when the payload contains a \"data\" key. It describes the pagination of the data contained in the \"data\" array, as a way to identify which subset of data is being returned. Pages are zero indexed, so the first page will be page 0 (zero).")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class MetadataPagination   {
   @JsonProperty("currentPage")
@@ -34,7 +33,7 @@ public class MetadataPagination   {
     return this;
   }
 
-   /**
+  /**
    * Get currentPage
    * @return currentPage
   **/
@@ -54,7 +53,7 @@ public class MetadataPagination   {
     return this;
   }
 
-   /**
+  /**
    * Get pageSize
    * @return pageSize
   **/
@@ -74,7 +73,7 @@ public class MetadataPagination   {
     return this;
   }
 
-   /**
+  /**
    * Get totalCount
    * @return totalCount
   **/
@@ -94,7 +93,7 @@ public class MetadataPagination   {
     return this;
   }
 
-   /**
+  /**
    * Get totalPages
    * @return totalPages
   **/

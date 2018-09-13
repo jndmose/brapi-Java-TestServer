@@ -16,7 +16,6 @@ import javax.validation.constraints.*;
  * PhenotypesRequest
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class PhenotypesRequest   {
   @JsonProperty("data")
@@ -36,7 +35,7 @@ public class PhenotypesRequest   {
     return this;
   }
 
-   /**
+  /**
    * Matrix of observation data recorded for different observation variables across different observation units
    * @return data
   **/

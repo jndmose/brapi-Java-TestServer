@@ -16,10 +16,9 @@ import javax.validation.constraints.*;
  * VendorPlatesResponseResult
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class VendorPlatesResponseResult   {
-  @JsonProperty("data")
+  @JsonProperty("plates")
   @Valid
   private List<VendorPlate> plates = null;
 
@@ -36,7 +35,7 @@ public class VendorPlatesResponseResult   {
     return this;
   }
 
-   /**
+  /**
    * Get plates
    * @return plates
   **/

@@ -15,7 +15,6 @@ import javax.validation.constraints.*;
  * NewObservationsTableRequest
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class NewObservationsTableRequest   {
   @JsonProperty("data")
@@ -49,7 +48,7 @@ public class NewObservationsTableRequest   {
     return this;
   }
 
-   /**
+  /**
    * Matrix of observation data recorded for different observation variables across different observation units
    * @return data
   **/
@@ -78,7 +77,7 @@ public class NewObservationsTableRequest   {
     return this;
   }
 
-   /**
+  /**
    * The header row describing the data matrix. Append 'observationVariableDbIds' for complete header row.
    * @return headerRow
   **/
@@ -98,7 +97,7 @@ public class NewObservationsTableRequest   {
     return this;
   }
 
-   /**
+  /**
    * DEPRECATED
    * @return metadata
   **/
@@ -126,7 +125,7 @@ public class NewObservationsTableRequest   {
     return this;
   }
 
-   /**
+  /**
    * The list of observation variables which have values recorded for them in the data matrix. Append to the 'headerRow' for comlete header row.
    * @return observationVariableDbIds
   **/
@@ -146,7 +145,7 @@ public class NewObservationsTableRequest   {
     return this;
   }
 
-   /**
+  /**
    * DEPRECATED
    * @return result
   **/

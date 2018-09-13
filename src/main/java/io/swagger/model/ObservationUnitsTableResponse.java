@@ -15,7 +15,6 @@ import javax.validation.constraints.*;
  * ObservationUnitsTableResponse
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class ObservationUnitsTableResponse   {
   @JsonProperty("data")
@@ -47,7 +46,7 @@ public class ObservationUnitsTableResponse   {
     return this;
   }
 
-   /**
+  /**
    * Matrix of observation meta-data and recorded values. Each inner array represents 1 row of data.
    * @return data
   **/
@@ -76,7 +75,7 @@ public class ObservationUnitsTableResponse   {
     return this;
   }
 
-   /**
+  /**
    * Names of the columns included in the data matrix. Any or All of [ \"year\",\"studyDbId\",\"studyName\",\"locationDbId\",\"locationName\",\"germplasmDbId\",\"germplasmName\",\"observationUnitDbId\",\"plotNumber\",\"replicate\",\"blockNumber\", \"observationTimestamp\", \"entryType\", \"X\", \"Y\"]
    * @return headerRow
   **/
@@ -104,7 +103,7 @@ public class ObservationUnitsTableResponse   {
     return this;
   }
 
-   /**
+  /**
    * Array of observation variable DbIds for the collected data. This array is appended to the \"headerRow\" to get the complete header of the data matrix
    * @return observationVariableDbIds
   **/
@@ -132,7 +131,7 @@ public class ObservationUnitsTableResponse   {
     return this;
   }
 
-   /**
+  /**
    * Human readable names of the observation variables for the collected data. This array should match 1 to 1 with the \"observationVariableDbIds\" array.
    * @return observationVariableNames
   **/

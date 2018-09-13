@@ -13,7 +13,6 @@ import javax.validation.constraints.*;
  * GermplasmDonors
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class GermplasmDonors   {
   @JsonProperty("donorAccessionNumber")
@@ -30,7 +29,7 @@ public class GermplasmDonors   {
     return this;
   }
 
-   /**
+  /**
    * Get donorAccessionNumber
    * @return donorAccessionNumber
   **/
@@ -50,7 +49,7 @@ public class GermplasmDonors   {
     return this;
   }
 
-   /**
+  /**
    * Get donorInstituteCode
    * @return donorInstituteCode
   **/
@@ -70,7 +69,7 @@ public class GermplasmDonors   {
     return this;
   }
 
-   /**
+  /**
    * Get germplasmPUI
    * @return germplasmPUI
   **/

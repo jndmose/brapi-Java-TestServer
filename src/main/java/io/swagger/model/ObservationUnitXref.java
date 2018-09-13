@@ -13,7 +13,6 @@ import javax.validation.constraints.*;
  * ObservationUnitXref
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class ObservationUnitXref   {
   @JsonProperty("id")
@@ -27,7 +26,7 @@ public class ObservationUnitXref   {
     return this;
   }
 
-   /**
+  /**
    * The unique ID in the external reference 'source' system
    * @return id
   **/
@@ -47,7 +46,7 @@ public class ObservationUnitXref   {
     return this;
   }
 
-   /**
+  /**
    * The system identifier (name, URL, etc) which has an external reference to the observation unit
    * @return source
   **/

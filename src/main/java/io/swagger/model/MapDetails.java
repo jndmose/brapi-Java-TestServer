@@ -16,7 +16,6 @@ import javax.validation.constraints.*;
  * MapDetails
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class MapDetails   {
   @JsonProperty("data")
@@ -29,6 +28,9 @@ public class MapDetails   {
 
   @JsonProperty("mapDbId")
   private String mapDbId = null;
+
+  @JsonProperty("mapName")
+  private String mapName = null;
 
   @JsonProperty("name")
   private String name = null;
@@ -52,7 +54,7 @@ public class MapDetails   {
     return this;
   }
 
-   /**
+  /**
    * List of linkage group details associated with a given map
    * @return data
   **/
@@ -81,7 +83,7 @@ public class MapDetails   {
     return this;
   }
 
-   /**
+  /**
    * **Deprecated** Use \"data\"
    * @return linkageGroups
   **/
@@ -102,7 +104,7 @@ public class MapDetails   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies this genome map
    * @return mapDbId
   **/
@@ -117,16 +119,36 @@ public class MapDetails   {
     this.mapDbId = mapDbId;
   }
 
+  public MapDetails mapName(String mapName) {
+    this.mapName = mapName;
+    return this;
+  }
+
+  /**
+   * A human readable name for this map
+   * @return mapName
+  **/
+  @ApiModelProperty(value = "A human readable name for this map")
+
+
+  public String getMapName() {
+    return mapName;
+  }
+
+  public void setMapName(String mapName) {
+    this.mapName = mapName;
+  }
+
   public MapDetails name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * A human readable name for this map
+  /**
+   * DEPRECATED in v1.3 - Use \"mapName\"
    * @return name
   **/
-  @ApiModelProperty(value = "A human readable name for this map")
+  @ApiModelProperty(value = "DEPRECATED in v1.3 - Use \"mapName\"")
 
 
   public String getName() {
@@ -142,7 +164,7 @@ public class MapDetails   {
     return this;
   }
 
-   /**
+  /**
    * The type of map this represents, ussually \"Genetic\"
    * @return type
   **/
@@ -162,7 +184,7 @@ public class MapDetails   {
     return this;
   }
 
-   /**
+  /**
    * The units used to describe the data in this map
    * @return unit
   **/
@@ -190,6 +212,7 @@ public class MapDetails   {
     return Objects.equals(this.data, mapDetails.data) &&
         Objects.equals(this.linkageGroups, mapDetails.linkageGroups) &&
         Objects.equals(this.mapDbId, mapDetails.mapDbId) &&
+        Objects.equals(this.mapName, mapDetails.mapName) &&
         Objects.equals(this.name, mapDetails.name) &&
         Objects.equals(this.type, mapDetails.type) &&
         Objects.equals(this.unit, mapDetails.unit);
@@ -197,7 +220,7 @@ public class MapDetails   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(data, linkageGroups, mapDbId, name, type, unit);
+    return Objects.hash(data, linkageGroups, mapDbId, mapName, name, type, unit);
   }
 
   @Override
@@ -208,6 +231,7 @@ public class MapDetails   {
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("    linkageGroups: ").append(toIndentedString(linkageGroups)).append("\n");
     sb.append("    mapDbId: ").append(toIndentedString(mapDbId)).append("\n");
+    sb.append("    mapName: ").append(toIndentedString(mapName)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    unit: ").append(toIndentedString(unit)).append("\n");

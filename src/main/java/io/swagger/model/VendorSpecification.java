@@ -18,7 +18,6 @@ import javax.validation.constraints.*;
  * VendorSpecification
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class VendorSpecification   {
   @JsonProperty("additionalInfo")
@@ -69,7 +68,7 @@ public class VendorSpecification   {
     return this;
   }
 
-   /**
+  /**
    * Additional arbitrary info
    * @return additionalInfo
   **/
@@ -89,7 +88,7 @@ public class VendorSpecification   {
     return this;
   }
 
-   /**
+  /**
    * The name or identifier of the primary vendor contact
    * @return contactName
   **/
@@ -117,7 +116,7 @@ public class VendorSpecification   {
     return this;
   }
 
-   /**
+  /**
    * List of platform specifications available at the vendor
    * @return platforms
   **/
@@ -138,7 +137,7 @@ public class VendorSpecification   {
     return this;
   }
 
-   /**
+  /**
    * The street address of the vendor
    * @return vendorAddress
   **/
@@ -158,7 +157,7 @@ public class VendorSpecification   {
     return this;
   }
 
-   /**
+  /**
    * The name of the city where the vendor is located
    * @return vendorCity
   **/
@@ -178,7 +177,7 @@ public class VendorSpecification   {
     return this;
   }
 
-   /**
+  /**
    * The name of the country where the vendor is located
    * @return vendorCountry
   **/
@@ -198,7 +197,7 @@ public class VendorSpecification   {
     return this;
   }
 
-   /**
+  /**
    * A description of the vendor
    * @return vendorDescription
   **/
@@ -218,7 +217,7 @@ public class VendorSpecification   {
     return this;
   }
 
-   /**
+  /**
    * The primary email address used to contact the vendor
    * @return vendorEmail
   **/
@@ -238,7 +237,7 @@ public class VendorSpecification   {
     return this;
   }
 
-   /**
+  /**
    * The human readable name of the vendor
    * @return vendorName
   **/
@@ -258,7 +257,7 @@ public class VendorSpecification   {
     return this;
   }
 
-   /**
+  /**
    * The primary phone number used to contact the vendor
    * @return vendorPhone
   **/
@@ -278,7 +277,7 @@ public class VendorSpecification   {
     return this;
   }
 
-   /**
+  /**
    * The primary URL for the vendor
    * @return vendorURL
   **/

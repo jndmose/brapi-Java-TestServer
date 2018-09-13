@@ -15,7 +15,6 @@ import javax.validation.constraints.*;
  * ValidValues
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class ValidValues   {
   @JsonProperty("categories")
@@ -41,7 +40,7 @@ public class ValidValues   {
     return this;
   }
 
-   /**
+  /**
    * List of possible values and their meaning (examples: [\"0=low\", \"1=medium\", \"2=high\"]
    * @return categories
   **/
@@ -61,7 +60,7 @@ public class ValidValues   {
     return this;
   }
 
-   /**
+  /**
    * Maximum value (used for field data capture control).
    * @return max
   **/
@@ -81,7 +80,7 @@ public class ValidValues   {
     return this;
   }
 
-   /**
+  /**
    * Minimum value (used for data capture control) for numerical and date scales
    * @return min
   **/

@@ -18,7 +18,6 @@ import javax.validation.constraints.*;
  * StudySummary
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class StudySummary   {
   @JsonProperty("active")
@@ -56,6 +55,9 @@ public class StudySummary   {
   @JsonProperty("studyDbId")
   private String studyDbId = null;
 
+  @JsonProperty("studyName")
+  private String studyName = null;
+
   @JsonProperty("studyType")
   private String studyType = null;
 
@@ -65,16 +67,27 @@ public class StudySummary   {
   @JsonProperty("trialName")
   private String trialName = null;
 
+  public StudySummary active(String active) {
+    this.active = active;
+    return this;
+  }
+
+  /**
+   * Is this study currently active
+   * @return active
+  **/
+  @ApiModelProperty(value = "Is this study currently active")
+
 
   public String getActive() {
-	return active;
-}
+    return active;
+  }
 
-public void setActive(String active) {
-	this.active = active;
-}
+  public void setActive(String active) {
+    this.active = active;
+  }
 
-public StudySummary additionalInfo(Map<String, String> additionalInfo) {
+  public StudySummary additionalInfo(Map<String, String> additionalInfo) {
     this.additionalInfo = additionalInfo;
     return this;
   }
@@ -87,7 +100,7 @@ public StudySummary additionalInfo(Map<String, String> additionalInfo) {
     return this;
   }
 
-   /**
+  /**
    * Additional arbitrary info
    * @return additionalInfo
   **/
@@ -107,7 +120,7 @@ public StudySummary additionalInfo(Map<String, String> additionalInfo) {
     return this;
   }
 
-   /**
+  /**
    * The date the study ends
    * @return endDate
   **/
@@ -128,7 +141,7 @@ public StudySummary additionalInfo(Map<String, String> additionalInfo) {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies a location
    * @return locationDbId
   **/
@@ -148,7 +161,7 @@ public StudySummary additionalInfo(Map<String, String> additionalInfo) {
     return this;
   }
 
-   /**
+  /**
    * The human readable name for a location
    * @return locationName
   **/
@@ -168,11 +181,11 @@ public StudySummary additionalInfo(Map<String, String> additionalInfo) {
     return this;
   }
 
-   /**
-   * The humane readable name of a study
+  /**
+   * DEPRECATED in v1.3 - Use \"studyName\"
    * @return name
   **/
-  @ApiModelProperty(value = "The humane readable name of a study")
+  @ApiModelProperty(value = "DEPRECATED in v1.3 - Use \"studyName\"")
 
 
   public String getName() {
@@ -188,7 +201,7 @@ public StudySummary additionalInfo(Map<String, String> additionalInfo) {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies a program within the given database server
    * @return programDbId
   **/
@@ -208,7 +221,7 @@ public StudySummary additionalInfo(Map<String, String> additionalInfo) {
     return this;
   }
 
-   /**
+  /**
    * The humane readable name of a program
    * @return programName
   **/
@@ -236,7 +249,7 @@ public StudySummary additionalInfo(Map<String, String> additionalInfo) {
     return this;
   }
 
-   /**
+  /**
    * List of seasons over which this study was performed.
    * @return seasons
   **/
@@ -256,7 +269,7 @@ public StudySummary additionalInfo(Map<String, String> additionalInfo) {
     return this;
   }
 
-   /**
+  /**
    * The date this study started
    * @return startDate
   **/
@@ -277,7 +290,7 @@ public StudySummary additionalInfo(Map<String, String> additionalInfo) {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies a study within the given database server
    * @return studyDbId
   **/
@@ -292,12 +305,32 @@ public StudySummary additionalInfo(Map<String, String> additionalInfo) {
     this.studyDbId = studyDbId;
   }
 
+  public StudySummary studyName(String studyName) {
+    this.studyName = studyName;
+    return this;
+  }
+
+  /**
+   * The humane readable name of a study
+   * @return studyName
+  **/
+  @ApiModelProperty(value = "The humane readable name of a study")
+
+
+  public String getStudyName() {
+    return studyName;
+  }
+
+  public void setStudyName(String studyName) {
+    this.studyName = studyName;
+  }
+
   public StudySummary studyType(String studyType) {
     this.studyType = studyType;
     return this;
   }
 
-   /**
+  /**
    * The type of study being performed. ex. \"Yeald Trial\", etc
    * @return studyType
   **/
@@ -317,7 +350,7 @@ public StudySummary additionalInfo(Map<String, String> additionalInfo) {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies a trial
    * @return trialDbId
   **/
@@ -337,7 +370,7 @@ public StudySummary additionalInfo(Map<String, String> additionalInfo) {
     return this;
   }
 
-   /**
+  /**
    * The human readable name of a trial
    * @return trialName
   **/
@@ -373,6 +406,7 @@ public StudySummary additionalInfo(Map<String, String> additionalInfo) {
         Objects.equals(this.seasons, studySummary.seasons) &&
         Objects.equals(this.startDate, studySummary.startDate) &&
         Objects.equals(this.studyDbId, studySummary.studyDbId) &&
+        Objects.equals(this.studyName, studySummary.studyName) &&
         Objects.equals(this.studyType, studySummary.studyType) &&
         Objects.equals(this.trialDbId, studySummary.trialDbId) &&
         Objects.equals(this.trialName, studySummary.trialName);
@@ -380,7 +414,7 @@ public StudySummary additionalInfo(Map<String, String> additionalInfo) {
 
   @Override
   public int hashCode() {
-    return Objects.hash(active, additionalInfo, endDate, locationDbId, locationName, name, programDbId, programName, seasons, startDate, studyDbId, studyType, trialDbId, trialName);
+    return Objects.hash(active, additionalInfo, endDate, locationDbId, locationName, name, programDbId, programName, seasons, startDate, studyDbId, studyName, studyType, trialDbId, trialName);
   }
 
   @Override
@@ -399,6 +433,7 @@ public StudySummary additionalInfo(Map<String, String> additionalInfo) {
     sb.append("    seasons: ").append(toIndentedString(seasons)).append("\n");
     sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
     sb.append("    studyDbId: ").append(toIndentedString(studyDbId)).append("\n");
+    sb.append("    studyName: ").append(toIndentedString(studyName)).append("\n");
     sb.append("    studyType: ").append(toIndentedString(studyType)).append("\n");
     sb.append("    trialDbId: ").append(toIndentedString(trialDbId)).append("\n");
     sb.append("    trialName: ").append(toIndentedString(trialName)).append("\n");

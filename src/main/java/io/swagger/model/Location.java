@@ -17,7 +17,6 @@ import javax.validation.constraints.*;
  * Location
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class Location   {
   @JsonProperty("abbreviation")
@@ -54,6 +53,9 @@ public class Location   {
   @JsonProperty("locationDbId")
   private String locationDbId = null;
 
+  @JsonProperty("locationName")
+  private String locationName = null;
+
   @JsonProperty("locationType")
   private String locationType = null;
 
@@ -68,7 +70,7 @@ public class Location   {
     return this;
   }
 
-   /**
+  /**
    * An abbreviation which represents this location
    * @return abbreviation
   **/
@@ -88,7 +90,7 @@ public class Location   {
     return this;
   }
 
-   /**
+  /**
    * Deprecated  <strong>Use abbreviation</strong> 
    * @return abreviation
   **/
@@ -116,7 +118,7 @@ public class Location   {
     return this;
   }
 
-   /**
+  /**
    * Additional arbitrary info
    * @return additionalInfo
   **/
@@ -136,7 +138,7 @@ public class Location   {
     return this;
   }
 
-   /**
+  /**
    * The altitude of this location
    * @return altitude
   **/
@@ -157,7 +159,7 @@ public class Location   {
     return this;
   }
 
-   /**
+  /**
    * [ISO_3166-1_alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) spec
    * @return countryCode
   **/
@@ -177,7 +179,7 @@ public class Location   {
     return this;
   }
 
-   /**
+  /**
    * The full name of the country where this location is
    * @return countryName
   **/
@@ -197,7 +199,7 @@ public class Location   {
     return this;
   }
 
-   /**
+  /**
    * The street address of the institute representing this location
    * @return instituteAddress
   **/
@@ -217,7 +219,7 @@ public class Location   {
     return this;
   }
 
-   /**
+  /**
    * Deprecated  <strong>Use instituteAddress</strong> 
    * @return instituteAdress
   **/
@@ -237,7 +239,7 @@ public class Location   {
     return this;
   }
 
-   /**
+  /**
    * each institute/laboratory can have several experimental field
    * @return instituteName
   **/
@@ -257,7 +259,7 @@ public class Location   {
     return this;
   }
 
-   /**
+  /**
    * The latitude of this location
    * @return latitude
   **/
@@ -278,7 +280,7 @@ public class Location   {
     return this;
   }
 
-   /**
+  /**
    * string identifier
    * @return locationDbId
   **/
@@ -293,12 +295,32 @@ public class Location   {
     this.locationDbId = locationDbId;
   }
 
+  public Location locationName(String locationName) {
+    this.locationName = locationName;
+    return this;
+  }
+
+  /**
+   * A human readable name for this location
+   * @return locationName
+  **/
+  @ApiModelProperty(value = "A human readable name for this location")
+
+
+  public String getLocationName() {
+    return locationName;
+  }
+
+  public void setLocationName(String locationName) {
+    this.locationName = locationName;
+  }
+
   public Location locationType(String locationType) {
     this.locationType = locationType;
     return this;
   }
 
-   /**
+  /**
    * The type of location this represents (ex. Breeding Location, Storage Location, etc)
    * @return locationType
   **/
@@ -318,7 +340,7 @@ public class Location   {
     return this;
   }
 
-   /**
+  /**
    * the longitude of this location
    * @return longitude
   **/
@@ -339,11 +361,11 @@ public class Location   {
     return this;
   }
 
-   /**
-   * A human readable name for this location
+  /**
+   * DEPRECATED in v1.3 - Use \"locationName\"
    * @return name
   **/
-  @ApiModelProperty(value = "A human readable name for this location")
+  @ApiModelProperty(value = "DEPRECATED in v1.3 - Use \"locationName\"")
 
 
   public String getName() {
@@ -375,6 +397,7 @@ public class Location   {
         Objects.equals(this.instituteName, location.instituteName) &&
         Objects.equals(this.latitude, location.latitude) &&
         Objects.equals(this.locationDbId, location.locationDbId) &&
+        Objects.equals(this.locationName, location.locationName) &&
         Objects.equals(this.locationType, location.locationType) &&
         Objects.equals(this.longitude, location.longitude) &&
         Objects.equals(this.name, location.name);
@@ -382,7 +405,7 @@ public class Location   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(abbreviation, abreviation, additionalInfo, altitude, countryCode, countryName, instituteAddress, instituteAdress, instituteName, latitude, locationDbId, locationType, longitude, name);
+    return Objects.hash(abbreviation, abreviation, additionalInfo, altitude, countryCode, countryName, instituteAddress, instituteAdress, instituteName, latitude, locationDbId, locationName, locationType, longitude, name);
   }
 
   @Override
@@ -401,6 +424,7 @@ public class Location   {
     sb.append("    instituteName: ").append(toIndentedString(instituteName)).append("\n");
     sb.append("    latitude: ").append(toIndentedString(latitude)).append("\n");
     sb.append("    locationDbId: ").append(toIndentedString(locationDbId)).append("\n");
+    sb.append("    locationName: ").append(toIndentedString(locationName)).append("\n");
     sb.append("    locationType: ").append(toIndentedString(locationType)).append("\n");
     sb.append("    longitude: ").append(toIndentedString(longitude)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");

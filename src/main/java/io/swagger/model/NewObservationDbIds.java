@@ -16,7 +16,6 @@ import javax.validation.constraints.*;
  * NewObservationDbIds
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class NewObservationDbIds   {
   @JsonProperty("observations")
@@ -36,7 +35,7 @@ public class NewObservationDbIds   {
     return this;
   }
 
-   /**
+  /**
    * List of observation references which have been created or updated
    * @return observations
   **/

@@ -13,7 +13,6 @@ import javax.validation.constraints.*;
  * ObservationTreatment
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class ObservationTreatment   {
   @JsonProperty("factor")
@@ -27,7 +26,7 @@ public class ObservationTreatment   {
     return this;
   }
 
-   /**
+  /**
    * The type of treatment/factor. ex. 'fertilizer', 'inoculation', 'irrigation', etc
    * @return factor
   **/
@@ -47,7 +46,7 @@ public class ObservationTreatment   {
     return this;
   }
 
-   /**
+  /**
    * The treatment/factor descritpion. ex. 'low fertilizer', 'yellow rust inoculation', 'high water', etc
    * @return modality
   **/

@@ -14,7 +14,6 @@ import javax.validation.constraints.*;
  * ProgenyProgeny
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class ProgenyProgeny   {
   @JsonProperty("defaultDisplayName")
@@ -66,7 +65,7 @@ public class ProgenyProgeny   {
     return this;
   }
 
-   /**
+  /**
    * Get defaultDisplayName
    * @return defaultDisplayName
   **/
@@ -86,7 +85,7 @@ public class ProgenyProgeny   {
     return this;
   }
 
-   /**
+  /**
    * Get germplasmDbId
    * @return germplasmDbId
   **/
@@ -106,7 +105,7 @@ public class ProgenyProgeny   {
     return this;
   }
 
-   /**
+  /**
    * Get parentType
    * @return parentType
   **/

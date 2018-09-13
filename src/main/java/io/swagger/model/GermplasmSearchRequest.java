@@ -15,7 +15,6 @@ import javax.validation.constraints.*;
  * GermplasmSearchRequest
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class GermplasmSearchRequest   {
   @JsonProperty("accessionNumbers")
@@ -65,7 +64,7 @@ public class GermplasmSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * List unique identifiers for accessions within a genebank
    * @return accessionNumbers
   **/
@@ -93,7 +92,7 @@ public class GermplasmSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * List crops to search by
    * @return commonCropNames
   **/
@@ -121,7 +120,7 @@ public class GermplasmSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * List of IDs which uniquely identify germplasm
    * @return germplasmDbIds
   **/
@@ -149,7 +148,7 @@ public class GermplasmSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * List of Genus names to identify germplasm
    * @return germplasmGenus
   **/
@@ -177,7 +176,7 @@ public class GermplasmSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * List of human readable names to identify germplasm
    * @return germplasmNames
   **/
@@ -205,7 +204,7 @@ public class GermplasmSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * List of Permanent Unique Identifiers to identify germplasm
    * @return germplasmPUIs
   **/
@@ -233,7 +232,7 @@ public class GermplasmSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * List of Species names to identify germplasm
    * @return germplasmSpecies
   **/
@@ -253,7 +252,7 @@ public class GermplasmSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * Which page of the \"data\" array to return. The page indexing starts at 0 (page=0 will return the first page). Default is 0.
    * @return page
   **/
@@ -273,7 +272,7 @@ public class GermplasmSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * The maximum number of items to return per page of the \"data\" array. Default is 1000.
    * @return pageSize
   **/

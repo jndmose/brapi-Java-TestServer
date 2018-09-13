@@ -13,7 +13,6 @@ import javax.validation.constraints.*;
  * BreedingMethod
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class BreedingMethod   {
   @JsonProperty("abbreviation")
@@ -21,6 +20,9 @@ public class BreedingMethod   {
 
   @JsonProperty("breedingMethodDbId")
   private String breedingMethodDbId = null;
+
+  @JsonProperty("breedingMethodName")
+  private String breedingMethodName = null;
 
   @JsonProperty("description")
   private String description = null;
@@ -33,7 +35,7 @@ public class BreedingMethod   {
     return this;
   }
 
-   /**
+  /**
    * an abbreviation for the name of this breeding method
    * @return abbreviation
   **/
@@ -53,7 +55,7 @@ public class BreedingMethod   {
     return this;
   }
 
-   /**
+  /**
    * the unique identifier for this breeding method
    * @return breedingMethodDbId
   **/
@@ -69,12 +71,32 @@ public class BreedingMethod   {
     this.breedingMethodDbId = breedingMethodDbId;
   }
 
+  public BreedingMethod breedingMethodName(String breedingMethodName) {
+    this.breedingMethodName = breedingMethodName;
+    return this;
+  }
+
+  /**
+   * human readable name of the breeding method
+   * @return breedingMethodName
+  **/
+  @ApiModelProperty(value = "human readable name of the breeding method")
+
+
+  public String getBreedingMethodName() {
+    return breedingMethodName;
+  }
+
+  public void setBreedingMethodName(String breedingMethodName) {
+    this.breedingMethodName = breedingMethodName;
+  }
+
   public BreedingMethod description(String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * human readable description of the breeding method
    * @return description
   **/
@@ -94,11 +116,11 @@ public class BreedingMethod   {
     return this;
   }
 
-   /**
-   * human readable name of the breeding method
+  /**
+   * DEPRECATED in v1.3 - Use \"breedingMethodName\"
    * @return name
   **/
-  @ApiModelProperty(value = "human readable name of the breeding method")
+  @ApiModelProperty(value = "DEPRECATED in v1.3 - Use \"breedingMethodName\"")
 
 
   public String getName() {
@@ -121,13 +143,14 @@ public class BreedingMethod   {
     BreedingMethod breedingMethod = (BreedingMethod) o;
     return Objects.equals(this.abbreviation, breedingMethod.abbreviation) &&
         Objects.equals(this.breedingMethodDbId, breedingMethod.breedingMethodDbId) &&
+        Objects.equals(this.breedingMethodName, breedingMethod.breedingMethodName) &&
         Objects.equals(this.description, breedingMethod.description) &&
         Objects.equals(this.name, breedingMethod.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(abbreviation, breedingMethodDbId, description, name);
+    return Objects.hash(abbreviation, breedingMethodDbId, breedingMethodName, description, name);
   }
 
   @Override
@@ -137,6 +160,7 @@ public class BreedingMethod   {
     
     sb.append("    abbreviation: ").append(toIndentedString(abbreviation)).append("\n");
     sb.append("    breedingMethodDbId: ").append(toIndentedString(breedingMethodDbId)).append("\n");
+    sb.append("    breedingMethodName: ").append(toIndentedString(breedingMethodName)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");

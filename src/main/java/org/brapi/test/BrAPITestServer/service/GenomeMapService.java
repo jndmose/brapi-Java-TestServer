@@ -62,6 +62,7 @@ public class GenomeMapService {
 		summary.setComments(entity.getComments());
 		summary.setMapDbId(entity.getId());
 		summary.setName(entity.getName());
+		summary.setMapName(entity.getName());
 		summary.setPublishedDate(DateUtility.toLocalDate(entity.getPublishedDate()));
 		summary.setSpecies(entity.getSpecies());
 		summary.setType(entity.getType());
@@ -85,6 +86,7 @@ public class GenomeMapService {
 			detail = new MapDetails();
 			detail.setMapDbId(entity.getId());
 			detail.setName(entity.getName());
+			detail.setMapName(entity.getName());
 			detail.setType(entity.getType());
 			detail.setUnit(entity.getUnit());
 

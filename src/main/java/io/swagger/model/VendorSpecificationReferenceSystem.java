@@ -13,7 +13,6 @@ import javax.validation.constraints.*;
  * VendorSpecificationReferenceSystem
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class VendorSpecificationReferenceSystem   {
   @JsonProperty("URI")
@@ -22,12 +21,15 @@ public class VendorSpecificationReferenceSystem   {
   @JsonProperty("name")
   private String name = null;
 
+  @JsonProperty("referenceSystemName")
+  private String referenceSystemName = null;
+
   public VendorSpecificationReferenceSystem URI(String URI) {
     this.URI = URI;
     return this;
   }
 
-   /**
+  /**
    * The primary URI for this reference system
    * @return URI
   **/
@@ -47,11 +49,11 @@ public class VendorSpecificationReferenceSystem   {
     return this;
   }
 
-   /**
-   * The human readable name for this reference system
+  /**
+   * DEPRECATED in v1.3 - Use \"referenceSystemName\"
    * @return name
   **/
-  @ApiModelProperty(value = "The human readable name for this reference system")
+  @ApiModelProperty(value = "DEPRECATED in v1.3 - Use \"referenceSystemName\"")
 
 
   public String getName() {
@@ -60,6 +62,26 @@ public class VendorSpecificationReferenceSystem   {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public VendorSpecificationReferenceSystem referenceSystemName(String referenceSystemName) {
+    this.referenceSystemName = referenceSystemName;
+    return this;
+  }
+
+  /**
+   * The human readable name for this reference system
+   * @return referenceSystemName
+  **/
+  @ApiModelProperty(value = "The human readable name for this reference system")
+
+
+  public String getReferenceSystemName() {
+    return referenceSystemName;
+  }
+
+  public void setReferenceSystemName(String referenceSystemName) {
+    this.referenceSystemName = referenceSystemName;
   }
 
 
@@ -73,12 +95,13 @@ public class VendorSpecificationReferenceSystem   {
     }
     VendorSpecificationReferenceSystem vendorSpecificationReferenceSystem = (VendorSpecificationReferenceSystem) o;
     return Objects.equals(this.URI, vendorSpecificationReferenceSystem.URI) &&
-        Objects.equals(this.name, vendorSpecificationReferenceSystem.name);
+        Objects.equals(this.name, vendorSpecificationReferenceSystem.name) &&
+        Objects.equals(this.referenceSystemName, vendorSpecificationReferenceSystem.referenceSystemName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(URI, name);
+    return Objects.hash(URI, name, referenceSystemName);
   }
 
   @Override
@@ -88,6 +111,7 @@ public class VendorSpecificationReferenceSystem   {
     
     sb.append("    URI: ").append(toIndentedString(URI)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    referenceSystemName: ").append(toIndentedString(referenceSystemName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

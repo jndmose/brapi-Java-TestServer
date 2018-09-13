@@ -18,7 +18,6 @@ import javax.validation.constraints.*;
  * VendorPlate
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class VendorPlate   {
   @JsonProperty("clientPlateDbId")
@@ -61,7 +60,7 @@ public class VendorPlate   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies this plate in the clients database
    * @return clientPlateDbId
   **/
@@ -90,7 +89,7 @@ public class VendorPlate   {
     return this;
   }
 
-   /**
+  /**
    * The array of data files produced by the vendors analysis
    * @return files
   **/
@@ -111,7 +110,7 @@ public class VendorPlate   {
     return this;
   }
 
-   /**
+  /**
    * Defines the plate layout format, usually \"Plate_96\" for a 96 well plate or \"Tubes\" for plateless format
    * @return plateFormat
   **/
@@ -131,7 +130,7 @@ public class VendorPlate   {
     return this;
   }
 
-   /**
+  /**
    * The type of sample. ie \"DNA\", \"RNA\", \"Tissue\", etc 
    * @return sampleType
   **/
@@ -156,7 +155,7 @@ public class VendorPlate   {
     return this;
   }
 
-   /**
+  /**
    * List of samples in the plate
    * @return samples
   **/
@@ -178,7 +177,7 @@ public class VendorPlate   {
     return this;
   }
 
-   /**
+  /**
    * The status of the plate in the processing pipeline. Typically, \"Received\", \"Processing\", \"QC_passed\", QC_failed\", \"Completed\" (as per vendor specifications)
    * @return status
   **/
@@ -199,7 +198,7 @@ public class VendorPlate   {
     return this;
   }
 
-   /**
+  /**
    * The time stamp of the most recent status update
    * @return statusTimeStamp
   **/
@@ -221,7 +220,7 @@ public class VendorPlate   {
     return this;
   }
 
-   /**
+  /**
    * A string that can be represented as a barcode, identifying this plate 
    * @return vendorBarcode
   **/
@@ -241,7 +240,7 @@ public class VendorPlate   {
     return this;
   }
 
-   /**
+  /**
    * A URL pointing to an image file which has the bar code which identifies this plate
    * @return vendorBarcodeImageURL
   **/
@@ -261,7 +260,7 @@ public class VendorPlate   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies this plate in the vendors database
    * @return vendorPlateDbId
   **/
@@ -282,7 +281,7 @@ public class VendorPlate   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies this project in the vendors database
    * @return vendorProjectDbId
   **/

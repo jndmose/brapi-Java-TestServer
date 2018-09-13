@@ -67,13 +67,12 @@ public class PhenotypeController extends BrAPIController implements PhenotypesAp
 	public ResponseEntity<ObservationUnitsResponse> phenotypesSearchGet(@Valid String germplasmDbId,
 			@Valid String observationVariableDbId, @Valid String studyDbId, @Valid String locationDbId,
 			@Valid String trialDbId, @Valid String programDbId, @Valid String seasonDbId,
-			@Valid String observationLevel, @Valid String observationTimeStampRangeStart,
-			@Valid String observationTimeStampRangeEnd, @Valid Integer pageSize, @Valid Integer page) throws BrAPIServerException {
+			@Valid String observationLevel, @Valid OffsetDateTime observationTimeStampRangeStart,
+			@Valid OffsetDateTime observationTimeStampRangeEnd, @Valid Integer pageSize, @Valid Integer page) throws BrAPIServerException {
 		Metadata metaData = generateMetaDataTemplate(page, pageSize);
 		List<ObservationUnitPhenotype> data = phenotypeService.getPhenotypes(germplasmDbId, observationVariableDbId,
-				studyDbId, locationDbId, trialDbId, programDbId, seasonDbId, observationLevel,
-				DateUtility.toOffsetDateTime(observationTimeStampRangeStart), 
-				DateUtility.toOffsetDateTime(observationTimeStampRangeEnd), metaData);
+				studyDbId, locationDbId, trialDbId, programDbId, seasonDbId, observationLevel, observationTimeStampRangeStart, 
+				observationTimeStampRangeEnd, metaData);
 
 		ObservationUnitsResponseResult result = new ObservationUnitsResponseResult();
 		result.setData(data);

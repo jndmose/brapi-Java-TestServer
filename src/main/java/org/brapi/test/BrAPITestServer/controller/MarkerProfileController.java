@@ -14,6 +14,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.swagger.api.AllelematricesApi;
@@ -66,7 +67,7 @@ public class MarkerProfileController extends BrAPIController implements Markerpr
 	//Deprecated
 	@CrossOrigin
 	@Override
-	public ResponseEntity<AlleleMatrixValuesResponse> allelematrixSearchPost(@Valid AlleleMatrixSearchRequest request) throws BrAPIServerException {
+	public ResponseEntity<AlleleMatrixValuesResponse> allelematrixSearchPost(@Valid @RequestBody AlleleMatrixSearchRequest request) throws BrAPIServerException {
 
 		Metadata metaData = generateMetaDataTemplate(request.getPage(), request.getPageSize());
 		AlleleFormatParams params = markerProfileService.buildFormatParams(request.isExpandHomozygotes(), request.getSepPhased(), request.getSepUnphased(), request.getUnknownString());
@@ -103,8 +104,7 @@ public class MarkerProfileController extends BrAPIController implements Markerpr
 
 	@CrossOrigin
 	@Override
-	public ResponseEntity<AlleleMatrixValuesResponse> allelematricesSearchPost(
-			io.swagger.model.@Valid AlleleMatrixSearchRequest request) throws BrAPIServerException {
+	public ResponseEntity<AlleleMatrixValuesResponse> allelematricesSearchPost(@Valid @RequestBody AlleleMatrixSearchRequest request) throws BrAPIServerException {
 
 		Metadata metaData = generateMetaDataTemplate(request.getPage(), request.getPageSize());
 		AlleleFormatParams params = markerProfileService.buildFormatParams(request.isExpandHomozygotes(), request.getSepPhased(), request.getSepUnphased(), request.getUnknownString());

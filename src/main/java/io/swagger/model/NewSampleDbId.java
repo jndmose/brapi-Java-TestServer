@@ -15,7 +15,6 @@ import javax.validation.constraints.*;
  * NewSampleDbId
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class NewSampleDbId   {
   @JsonProperty("metadata")
@@ -29,7 +28,7 @@ public class NewSampleDbId   {
     return this;
   }
 
-   /**
+  /**
    * Metadata of this response
    * @return metadata
   **/
@@ -50,7 +49,7 @@ public class NewSampleDbId   {
     return this;
   }
 
-   /**
+  /**
    * Get result
    * @return result
   **/

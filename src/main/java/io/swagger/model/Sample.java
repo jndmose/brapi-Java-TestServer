@@ -14,7 +14,6 @@ import javax.validation.constraints.*;
  * Sample
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class Sample   {
   @JsonProperty("germplasmDbId")
@@ -61,7 +60,7 @@ public class Sample   {
     return this;
   }
 
-   /**
+  /**
    *  The ID which uniquely identifies a germplasm
    * @return germplasmDbId
   **/
@@ -81,7 +80,7 @@ public class Sample   {
     return this;
   }
 
-   /**
+  /**
    * Additional notes about a samle
    * @return notes
   **/
@@ -101,7 +100,7 @@ public class Sample   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies an observation unit
    * @return observationUnitDbId
   **/
@@ -121,7 +120,7 @@ public class Sample   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies a plant. Usually 'plantNumber'
    * @return plantDbId
   **/
@@ -141,7 +140,7 @@ public class Sample   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies a plate of samples
    * @return plateDbId
   **/
@@ -161,7 +160,7 @@ public class Sample   {
     return this;
   }
 
-   /**
+  /**
    * The index number of this sample on a plate
    * @return plateIndex
   **/
@@ -181,7 +180,7 @@ public class Sample   {
     return this;
   }
 
-   /**
+  /**
    *  The ID which uniquely identifies a plot. Usually 'plotNumber'
    * @return plotDbId
   **/
@@ -201,7 +200,7 @@ public class Sample   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies a sample
    * @return sampleDbId
   **/
@@ -221,7 +220,7 @@ public class Sample   {
     return this;
   }
 
-   /**
+  /**
    * The date and time a sample was collected from the field
    * @return sampleTimestamp
   **/
@@ -242,7 +241,7 @@ public class Sample   {
     return this;
   }
 
-   /**
+  /**
    * The type of sample taken. ex. 'DNA', 'RNA', 'Tissue', etc 
    * @return sampleType
   **/
@@ -262,7 +261,7 @@ public class Sample   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies a study within the given database server
    * @return studyDbId
   **/
@@ -282,7 +281,7 @@ public class Sample   {
     return this;
   }
 
-   /**
+  /**
    * The name or identifier of the entity which took the sample from the field
    * @return takenBy
   **/
@@ -302,7 +301,7 @@ public class Sample   {
     return this;
   }
 
-   /**
+  /**
    * The type of tissue sampled. ex. 'Leaf', 'Root', etc.
    * @return tissueType
   **/

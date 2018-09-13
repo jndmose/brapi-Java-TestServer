@@ -15,7 +15,6 @@ import javax.validation.constraints.*;
  * AlleleMatrixSearchRequest
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class AlleleMatrixSearchRequest   {
   @JsonProperty("expandHomozygotes")
@@ -56,7 +55,7 @@ public class AlleleMatrixSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * Should homozygotes be expanded (true) or collapsed into a single occurence (false)
    * @return expandHomozygotes
   **/
@@ -76,7 +75,7 @@ public class AlleleMatrixSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * The data format of the response data. ie \"json\", \"tsv\", etc
    * @return format
   **/
@@ -104,7 +103,7 @@ public class AlleleMatrixSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * An ID which uniquely identifies a Marker
    * @return markerDbId
   **/
@@ -132,7 +131,7 @@ public class AlleleMatrixSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * An ID which uniquely identifies a Marker Profile
    * @return markerprofileDbId
   **/
@@ -160,7 +159,7 @@ public class AlleleMatrixSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * An ID which uniquely identifies an Allele Matrix
    * @return matrixDbId
   **/
@@ -180,7 +179,7 @@ public class AlleleMatrixSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * Which page of the \"data\" array to return. The page indexing starts at 0 (page=0 will return the first page). Default is 0.
    * @return page
   **/
@@ -200,7 +199,7 @@ public class AlleleMatrixSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * The maximum number of items to return per page of the \"data\" array. Default is 1000.
    * @return pageSize
   **/
@@ -220,7 +219,7 @@ public class AlleleMatrixSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * The string to use as a separator for phased allele calls.
    * @return sepPhased
   **/
@@ -240,7 +239,7 @@ public class AlleleMatrixSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * The string to use as a separator for unphased allele calls.
    * @return sepUnphased
   **/
@@ -260,7 +259,7 @@ public class AlleleMatrixSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * The string to use as a representation for missing data.
    * @return unknownString
   **/

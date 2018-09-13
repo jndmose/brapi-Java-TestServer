@@ -14,7 +14,6 @@ import javax.validation.constraints.*;
  * NewObservationsRequestObservations
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class NewObservationsRequestObservations   {
   @JsonProperty("collector")
@@ -40,7 +39,7 @@ public class NewObservationsRequestObservations   {
     return this;
   }
 
-   /**
+  /**
    * Get collector
    * @return collector
   **/
@@ -60,7 +59,7 @@ public class NewObservationsRequestObservations   {
     return this;
   }
 
-   /**
+  /**
    * Get observationDbId
    * @return observationDbId
   **/
@@ -80,7 +79,7 @@ public class NewObservationsRequestObservations   {
     return this;
   }
 
-   /**
+  /**
    * Get observationTimeStamp
    * @return observationTimeStamp
   **/
@@ -101,7 +100,7 @@ public class NewObservationsRequestObservations   {
     return this;
   }
 
-   /**
+  /**
    * Get observationUnitDbId
    * @return observationUnitDbId
   **/
@@ -121,7 +120,7 @@ public class NewObservationsRequestObservations   {
     return this;
   }
 
-   /**
+  /**
    * Get observationVariableDbId
    * @return observationVariableDbId
   **/
@@ -141,7 +140,7 @@ public class NewObservationsRequestObservations   {
     return this;
   }
 
-   /**
+  /**
    * Get value
    * @return value
   **/

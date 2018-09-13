@@ -15,7 +15,6 @@ import javax.validation.constraints.*;
  * SampleSearchRequest
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class SampleSearchRequest   {
   @JsonProperty("germplasmDbId")
@@ -53,7 +52,7 @@ public class SampleSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    *  The ID which uniquely identifies a germplasm
    * @return germplasmDbId
   **/
@@ -81,7 +80,7 @@ public class SampleSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies an observation unit
    * @return observationUnitDbId
   **/
@@ -101,7 +100,7 @@ public class SampleSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * Which result page is requested. The page indexing starts at 0 (the first page is 'page'= 0). Default is 0.
    * @return page
   **/
@@ -121,7 +120,7 @@ public class SampleSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * The size of the pages to be returned. Default is 1000.
    * @return pageSize
   **/
@@ -149,7 +148,7 @@ public class SampleSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies a plate of samples
    * @return plateDbId
   **/
@@ -177,7 +176,7 @@ public class SampleSearchRequest   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies a sample
    * @return sampleDbId
   **/

@@ -15,7 +15,6 @@ import javax.validation.constraints.*;
  * GermplasmAttributeDef
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-04T21:50:05.517Z")
 
 public class GermplasmAttributeDef   {
   @JsonProperty("attributeCategoryDbId")
@@ -23,6 +22,9 @@ public class GermplasmAttributeDef   {
 
   @JsonProperty("attributeDbId")
   private String attributeDbId = null;
+
+  @JsonProperty("attributeName")
+  private String attributeName = null;
 
   @JsonProperty("code")
   private String code = null;
@@ -48,7 +50,7 @@ public class GermplasmAttributeDef   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies this attribute category within the given database server
    * @return attributeCategoryDbId
   **/
@@ -68,7 +70,7 @@ public class GermplasmAttributeDef   {
     return this;
   }
 
-   /**
+  /**
    * The ID which uniquely identifies this attribute within the given database server
    * @return attributeDbId
   **/
@@ -83,12 +85,32 @@ public class GermplasmAttributeDef   {
     this.attributeDbId = attributeDbId;
   }
 
+  public GermplasmAttributeDef attributeName(String attributeName) {
+    this.attributeName = attributeName;
+    return this;
+  }
+
+  /**
+   * A human readable name for this attribute
+   * @return attributeName
+  **/
+  @ApiModelProperty(value = "A human readable name for this attribute")
+
+
+  public String getAttributeName() {
+    return attributeName;
+  }
+
+  public void setAttributeName(String attributeName) {
+    this.attributeName = attributeName;
+  }
+
   public GermplasmAttributeDef code(String code) {
     this.code = code;
     return this;
   }
 
-   /**
+  /**
    * Short abbreviation which represents this attribute
    * @return code
   **/
@@ -108,7 +130,7 @@ public class GermplasmAttributeDef   {
     return this;
   }
 
-   /**
+  /**
    * The type of data represented by this attribute
    * @return datatype
   **/
@@ -128,7 +150,7 @@ public class GermplasmAttributeDef   {
     return this;
   }
 
-   /**
+  /**
    * A human readable description of this attribute
    * @return description
   **/
@@ -148,11 +170,11 @@ public class GermplasmAttributeDef   {
     return this;
   }
 
-   /**
-   * A human readable name for this attribute
+  /**
+   * DEPRECATED in v1.3 - Use \"attributeName\"
    * @return name
   **/
-  @ApiModelProperty(value = "A human readable name for this attribute")
+  @ApiModelProperty(value = "DEPRECATED in v1.3 - Use \"attributeName\"")
 
 
   public String getName() {
@@ -168,7 +190,7 @@ public class GermplasmAttributeDef   {
     return this;
   }
 
-   /**
+  /**
    * The URI reference some external documentation or ontology for this attribute
    * @return uri
   **/
@@ -196,7 +218,7 @@ public class GermplasmAttributeDef   {
     return this;
   }
 
-   /**
+  /**
    * List of acceptable values for this attribute
    * @return values
   **/
@@ -223,6 +245,7 @@ public class GermplasmAttributeDef   {
     GermplasmAttributeDef germplasmAttributeDef = (GermplasmAttributeDef) o;
     return Objects.equals(this.attributeCategoryDbId, germplasmAttributeDef.attributeCategoryDbId) &&
         Objects.equals(this.attributeDbId, germplasmAttributeDef.attributeDbId) &&
+        Objects.equals(this.attributeName, germplasmAttributeDef.attributeName) &&
         Objects.equals(this.code, germplasmAttributeDef.code) &&
         Objects.equals(this.datatype, germplasmAttributeDef.datatype) &&
         Objects.equals(this.description, germplasmAttributeDef.description) &&
@@ -233,7 +256,7 @@ public class GermplasmAttributeDef   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(attributeCategoryDbId, attributeDbId, code, datatype, description, name, uri, values);
+    return Objects.hash(attributeCategoryDbId, attributeDbId, attributeName, code, datatype, description, name, uri, values);
   }
 
   @Override
@@ -243,6 +266,7 @@ public class GermplasmAttributeDef   {
     
     sb.append("    attributeCategoryDbId: ").append(toIndentedString(attributeCategoryDbId)).append("\n");
     sb.append("    attributeDbId: ").append(toIndentedString(attributeDbId)).append("\n");
+    sb.append("    attributeName: ").append(toIndentedString(attributeName)).append("\n");
     sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    datatype: ").append(toIndentedString(datatype)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
